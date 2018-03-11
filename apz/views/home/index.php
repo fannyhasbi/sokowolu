@@ -268,26 +268,95 @@ Redesign from : W3layouts
     </div>
   </div>
   <!--//welcome-->
-  <!--skills-->
-  <div class="skills">
+  
+  <!--services-->
+  <div class="services" id="services">
     <div class="container">
-      <h3 class="title wow fadeInDown animated" data-wow-delay=".5s">Our Features</h3>
-      <div class="skills-info">
-        <div class="col-md-6 bar-left bar_group">
-          <div class='bar_group__bar thin' label='Best Price ' value='150'></div>
-          <div class='bar_group__bar thin' label='Enjoyment' value='250'></div>
-          <div class='bar_group__bar thin' label='Trust & Safety' value='180'></div>
+      <h3 class="title wow fadeInDown animated" data-wow-delay=".5s">Services</h3>
+      <div class="servc-grids">
+        <div class="col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".5s">
+          <ul> 
+            <li>
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </li>
+            <li>
+              <h4>Cum soluta</h4>
+            </li>
+          </ul> 
+          <div class="clearfix"> </div>
+          <p>Itaque earum rerum hic tenetur a sapiente delectus 
+            reiciendis maiores alias consequatur aut</p>
         </div>
-        <div class="col-md-6 bar-right bar_group">
-          <div class='bar_group__bar thin' label='Planning Tours' value='250'></div>
-          <div class='bar_group__bar thin' label='Good Guidance' value='150'></div>
-          <div class='bar_group__bar thin' label='Best Hotels' value='200'></div>
+        <div class="col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".7s">
+          <ul> 
+            <li>
+              <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
+            </li>
+            <li>
+              <h4>Nobis esgendi</h4>
+            </li>
+          </ul> 
+          <div class="clearfix"> </div>
+          <p>Itaque earum rerum hic tenetur a sapiente delectus 
+            reiciendis maiores alias consequatur aut</p>
+        </div>
+        <div class="col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".9s">
+          <ul> 
+            <li>
+              <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+            </li>
+            <li>
+              <h4>Est eligendi</h4>
+            </li>
+          </ul> 
+          <div class="clearfix"> </div>
+          <p>Itaque earum rerum hic tenetur a sapiente delectus 
+            reiciendis maiores alias consequatur aut</p>
+        </div>
+        <div class="col-md-4 servc-grid servc-grid-btm wow fadeInUp animated" data-wow-delay=".5s">
+          <ul> 
+            <li>
+              <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+            </li>
+            <li>
+              <h4>Soluta nobis</h4>
+            </li>
+          </ul> 
+          <div class="clearfix"> </div>
+          <p>Itaque earum rerum hic tenetur a sapiente delectus 
+            reiciendis maiores alias consequatur aut</p>
+        </div>
+        <div class="col-md-4 servc-grid servc-grid-btm wow fadeInUp animated" data-wow-delay=".7s">
+          <ul> 
+            <li>
+              <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+            </li>
+            <li>
+              <h4>Msoluta est</h4>
+            </li>
+          </ul> 
+          <div class="clearfix"> </div>
+          <p>Itaque earum rerum hic tenetur a sapiente delectus 
+            reiciendis maiores alias consequatur aut</p>
+        </div>
+        <div class="col-md-4 servc-grid servc-grid-btm wow fadeInUp animated" data-wow-delay=".9s">
+          <ul> 
+            <li>
+              <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+            </li>
+            <li>
+              <h4>Nobis estli</h4>
+            </li>
+          </ul> 
+          <div class="clearfix"> </div>
+          <p>Itaque earum rerum hic tenetur a sapiente delectus 
+            reiciendis maiores alias consequatur aut</p>
         </div>
         <div class="clearfix"> </div>
       </div>
     </div>
   </div>
-  <!--//skills-->
+  <!--//services -->
   
   <!--portfolio-->
   <div id="portfolio" class="portfolio">

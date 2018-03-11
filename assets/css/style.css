@@ -1202,6 +1202,20 @@ p.twit-text {
 	filter: alpha(opacity=0);
 }
 /*--//slider-up-arrow--*/
+
+/*---- Redesign ----*/
+/** Designer : Fanny Hasbi;
+  * Website  : fannyhasbi.github.io
+  * Linkedin : https://linkedin.com/in/fannyhasbi
+  */
+.services {
+    background: #232323;
+}
+.services span, .services h4, .services p {
+    color: #fff;
+}
+
+
 /*---- responsive-design -----*/
 @media(max-width:1440px){
 .banner-text-info {
@@ -1954,6 +1968,7 @@ p.twit-text {
 }
 .callbacks_tabs {
     left: 43%;   
+}
 }
 @media(max-width:414px){
 button.navbar-toggle {
