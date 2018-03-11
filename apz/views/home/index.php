@@ -27,7 +27,6 @@ Redesign from : W3layouts
   <!--web-fonts-->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
 </head>
 <body>
   <!--banner-->
@@ -206,161 +205,51 @@ Redesign from : W3layouts
   <div id="portfolio" class="portfolio">
     <div class="container">
       <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">Foto Wisata</h3>
-      <div class="sap_tabs">      
-        <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-          <ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">
-            <li class="resp-tab-item"><span>Semua</span></li>
-            <li class="resp-tab-item"><span>Bukit</span></li>
-            <li class="resp-tab-item"><span>Desa</span></li>
-            <li class="resp-tab-item"><span>Candi</span></li>
-            <li class="resp-tab-item"><span>Lainnya</span></li>          
-          </ul> 
-          <div class="clearfix"> </div> 
-          <div class="resp-tabs-container">
-            <div class="tab-1 resp-tab-content">
-              <div class="tab_img">
-                <div class="col-md-4 portfolio-grids">
-                  <a class="wow zoomIn animated" data-wow-delay=".2s" href="<?= base_url(); ?>assets/img/g1.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
-                    <img src="<?= base_url(); ?>assets/img/g1.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 portfolio-grids">
-                  <a class="wow zoomIn animated" data-wow-delay=".7s" href="<?= base_url(); ?>assets/img/g2.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
-                    <img src="<?= base_url(); ?>assets/img/g2.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 portfolio-grids">
-                  <a class="wow zoomIn animated" data-wow-delay=".7s" href="<?= base_url(); ?>assets/img/g3.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
-                    <img src="<?= base_url(); ?>assets/img/g3.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="clearfix"> </div>
+      <div class="sap_tabs">
+        <div class="row">
+          <div class="col-md-4">
+            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/g1.jpg);" href="#">
+              <div class="details">
+                <h4>Top Vacations</h4>
               </div>
-              <div class="tab_img">
-                <div class="col-md-8 portfolio-grids portfolio-two">
-                  <a class="wow zoomIn animated" data-wow-delay=".9s" href="<?= base_url(); ?>assets/img/g4.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen book It has survived not only five centuries, but also remaining essentially unchanged. ">
-                    <img src="<?= base_url(); ?>assets/img/g4.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 portfolio-grids portfolio-grids-mdl">
-                  <a class="wow zoomIn animated" data-wow-delay=".2s" href="<?= base_url(); ?>assets/img/g5.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
-                    <img src="<?= base_url(); ?>assets/img/g5.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="clearfix"> </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/g2.jpg);" href="#">
+              <div class="details">
+                <h4>Top Vacations</h4>
               </div>
-              <div class="tab_img">
-                <div class="col-md-4 portfolio-grids">
-                  <a class="wow zoomIn animated" data-wow-delay=".9s" href="<?= base_url(); ?>assets/img/g7.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen book It has survived not only five centuries, but also remaining essentially unchanged. ">
-                    <img src="<?= base_url(); ?>assets/img/g7.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-8 portfolio-grids  portfolio-two portfolio-grids-mdl">
-                  <a class="wow zoomIn animated" data-wow-delay=".2s" href="<?= base_url(); ?>assets/img/g6.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
-                    <img src="<?= base_url(); ?>assets/img/g6.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="clearfix"> </div>
-              </div>  
-            </div>
-            <div class="tab-1 resp-tab-content">
-              <div class="tab_img">
-                <div class="col-md-4 portfolio-grids">
-                  <a class="wow zoomIn animated" data-wow-delay=".2s" href="<?= base_url(); ?>assets/img/g2.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
-                    <img src="<?= base_url(); ?>assets/img/g2.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 portfolio-grids">
-                  <a class="wow zoomIn animated" data-wow-delay=".7s" href="<?= base_url(); ?>assets/img/g5.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
-                    <img src="<?= base_url(); ?>assets/img/g5.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="clearfix"> </div>
-              </div>  
-            </div>
-            <div class="tab-1 resp-tab-content">
-              <div class="tab_img">
-                <div class="col-md-8 portfolio-grids portfolio-two">
-                  <a class="wow zoomIn animated" data-wow-delay=".2s" href="<?= base_url(); ?>assets/img/g4.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
-                    <img src="<?= base_url(); ?>assets/img/g4.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 portfolio-grids">
-                  <a class="wow zoomIn animated" data-wow-delay=".7s" href="<?= base_url(); ?>assets/img/g3.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
-                    <img src="<?= base_url(); ?>assets/img/g3.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="clearfix"> </div>
-              </div>  
-            </div>
-            <div class="tab-1 resp-tab-content">
-              <div class="tab_img">
-                <div class="col-md-4 portfolio-grids">
-                  <a class="wow zoomIn animated" data-wow-delay=".2s" href="<?= base_url(); ?>assets/img/g1.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
-                    <img src="<?= base_url(); ?>assets/img/g1.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-8 portfolio-grids portfolio-two">
-                  <a class="wow zoomIn animated" data-wow-delay=".7s" href="<?= base_url(); ?>assets/img/g6.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
-                    <img src="<?= base_url(); ?>assets/img/g6.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="clearfix"> </div>
-              </div>  
-            </div>
-            <div class="tab-1 resp-tab-content">
-              <div class="tab_img">
-                <div class="col-md-8 portfolio-grids portfolio-three">
-                  <a class="wow zoomIn animated" data-wow-delay=".2s" href="<?= base_url(); ?>assets/img/g7.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
-                    <img src="<?= base_url(); ?>assets/img/g7.jpg" class="img-responsive zoom-img" alt=""/>
-                    <div class="b-wrapper">
-                      <h5>Top Vacations</h5>
-                    </div>
-                  </a>
-                </div>
-                <div class="clearfix"> </div>
-              </div>  
-            </div>
-          </div>            
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/g3.jpg);" href="#">
+              <div class="details">
+                <h4>Top Vacations</h4>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/g4.jpg);" href="#">
+              <div class="details">
+                <h4>Top Vacations</h4>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/g5.jpg);" href="#">
+              <div class="details">
+                <h4>Top Vacations</h4>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/g6.jpg);" href="#">
+              <div class="details">
+                <h4>Top Vacations</h4>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -384,7 +273,7 @@ Redesign from : W3layouts
   <!--contact -->
   <div class="contact" id="contact">
     <div class="container">
-      <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">Kirim Kritik &amp; Saran</h3>
+      <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">Kritik &amp; Saran</h3>
       <div class="contact-form">
         <p class="wow slideInDown animated" data-wow-delay=".2s">Silahkan kirim kritik dan saran bagi kalian yang sudah mengunjungi Sokowolu. Kirimkan juga pertanyaan kalian jika kalian berminat mengunjungi Sokowolu.</p>
         <form>
