@@ -8,27 +8,26 @@ Redesign from : W3layouts
 <!DOCTYPE html>
 <html>
 <head>
-<title>Desa Sokowolu</title>
-<!--mobile apps-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Vacation Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-  Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--mobile apps-->
-<!--Custom Theme files -->
-<link href="<?= base_url(); ?>assets/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="<?= base_url(); ?>assets/css/style.css" type="text/css" rel="stylesheet" media="all">
-<link rel="stylesheet" href="<?= base_url(); ?>assets/css/lightbox.css">
-<link href="<?= base_url(); ?>assets/css/animate.css" rel="stylesheet" type="text/css" media="all">
-<!-- //Custom Theme files -->
-<!-- js -->
-<script src="<?= base_url(); ?>assets/js/jquery-1.11.1.min.js"></script> 
-<!-- //js -->
-<!--web-fonts-->
-<link href='//fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<!--//web-fonts-->
+  <title>Desa Sokowolu</title>
+
+  <!--mobile apps-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+  <!--Custom Theme files -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css" type="text/css" media="all">
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/css/lightbox.css" type="text/css">
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/css/animate.css" type="text/css" media="all">
+
+  <!-- js -->
+  <script src="<?= base_url(); ?>assets/js/jquery-1.11.1.min.js"></script> 
+
+  <!--web-fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
   <!--banner-->
@@ -38,24 +37,23 @@ Redesign from : W3layouts
       <div class="container">
         <div class="navbar-header logo">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">Ganti navigasi</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <h1 class="wow fadeInUp animated" data-wow-delay=".2s"><a href="index.html">Vacation</a></h1>
+          <h1 class="wow fadeInUp animated" data-wow-delay=".2s"><a href="index.html">Sokowolu</a></h1>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-right menu__list menu--shylock">
-            <li class="menu__item menu__item--current"><a href="index.html" class="menu__link">Home</a></li>
-            <li class="menu__item"><a href="#about" class="menu__link scroll">About</a></li>
-            <li class="menu__item"><a href="#services" class="menu__link scroll">Services</a></li>
-            <li class="menu__item"><a href="#portfolio" class="menu__link scroll">Portfolio</a></li>
-            <li class="menu__item"><a href="#contact" class="menu__link scroll">Contact</a></li>
-            <li><a href="#" class="sign-in" data-toggle="modal" data-target="#myModal">Book Now</a></li>
+            <li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="#about" class="menu__link scroll">Tentang</a></li>
+            <li class="menu__item"><a href="#services" class="menu__link scroll">Tanggapan</a></li>
+            <li class="menu__item"><a href="#portfolio" class="menu__link scroll">Foto</a></li>
+            <li class="menu__item"><a href="#contact" class="menu__link scroll">Pesan</a></li>
           </ul>
-          <div class="clearfix"> </div>
+          <div class="clearfix"></div>
         </div>
       </div>
     </div>  
@@ -87,28 +85,28 @@ Redesign from : W3layouts
         <ul class="rslides" id="slider3">
           <li>
             <div class="banner-text-info">
-              <h2 class="bnr-title wow zoomIn animated" data-wow-delay=".2s">WHAT A WONDERFUL WORLD </h2> 
-              <p class="wow fadeInDown animated" data-wow-delay=".7s">Lorem Ipsum was popularised In sit amet sapien eros Integer dolore magna aliqua Temporibus autem quibusdam</p>  
+              <h2 class="bnr-title wow zoomIn animated" data-wow-delay=".2s">TEMPAT SEJUK</h2> 
+              <p class="wow fadeInDown animated" data-wow-delay=".7s">Udara pegunungan yang dingin dan sejuk menambah ketenangan jiwa</p>  
               <div class="more">
-                <a href="#about" class="button-tamaya scroll" data-text="More About"><span>More About</span></a>
+                <a href="#about" class="button-tamaya scroll" data-text="Lihat disini"><span>Lihat disini</span></a>
               </div>  
             </div>  
           </li>
           <li>
             <div class="banner-text-info">
-              <h3 class="bnr-title">AMAZING HOLLYWOOD NIGHTS</h3> 
-              <p>In sit amet sapien eros Integer dolore magna aliqua Temporibus lorem lpsum was popularised autem quibusdam</p> 
+              <h3 class="bnr-title">WARGA DESA RAMAH</h3> 
+              <p>Warga desa Sokowolu yang dengan senang hati menyambut bahagia para wisatawan</p> 
               <div class="more">
-                <a href="#about" class="button-tamaya scroll" data-text="More About"><span>More About</span></a>
+                <a href="#about" class="button-tamaya scroll" data-text="Lihat disini"><span>Lihat disini</span></a>
               </div>
             </div>  
           </li>
           <li>
             <div class="banner-text-info">
-              <h3 class="bnr-title">MAGICAL MYSTERY TOUR</h3> 
-              <p>Temporibus autem quibusdam Lorem Ipsum was popularised In sit amet sapien eros Integer dolore magna aliqua </p>  
+              <h3 class="bnr-title">INSTAGRAMMABLE</h3> 
+              <p>Pemandangan dataran tinggi yang hijau dan WAH menjadikan Sokowolu menjadi tempat yang <i>instagrammable</i></p>  
               <div class="more">
-                <a href="#about" class="button-tamaya scroll" data-text="More About"><span>More About</span></a>
+                <a href="#about" class="button-tamaya scroll" data-text="Lihat disini"><span>Lihat disini</span></a>
               </div>
             </div>  
           </li>
@@ -117,133 +115,19 @@ Redesign from : W3layouts
     </div>  
   </div>
   <!--//banner-->
-  <!--modal-->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        </div>
-        <div class="modal-body modal-spa">  
-          <div class="booking-info">
-            <h3>Book Domestic &amp; International Vacation packages</h3>
-          </div>
-          <div class="booking-form">
-            <div class="reservation">
-              <ul>    
-                <li class="span1_of_1 desti">
-                  <h5>Flying from</h5>
-                  <div class="book_date">
-                    <form>
-                      <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-                      <input type="text" placeholder="Type Departure City" class="typeahead1 input-md form-control tt-input" required="">
-                    </form>
-                  </div>          
-                </li>
-                <li class="span1_of_1 left desti">
-                  <h5>Flying to</h5>
-                  <div class="book_date">
-                    <form>
-                      <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-                      <input type="text" placeholder="Type Destination City" class="typeahead1 input-md form-control tt-input" required="">
-                    </form>
-                  </div>    
-                </li>
-              </ul>
-              <div class="clearfix"></div>
-            </div>
-            <div class="reservation">
-              <ul>  
-                <li class="span1_of_1">
-                  <h5>Departure</h5>
-                  <div class="book_date">
-                    <form>
-                      <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                      <input type="date" value="Select date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Select date';}">
-                    </form>
-                  </div>    
-                </li>
-                <li  class="span1_of_1 left">
-                  <h5>Return</h5>
-                  <div class="book_date">
-                    <form>
-                      <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                      <input type="date" value="Select date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Select date';}">
-                    </form>
-                  </div>          
-                </li>
-                <li class="span1_of_2 left adult">
-                  <h5>Adults (18+)</h5>
-                  <!--start section-room-->
-                  <div class="section_room">
-                    <select id="country" onchange="change_country(this.value)" class="frm-field required">
-                      <option value="null">1</option>
-                      <option value="null">2</option>         
-                      <option value="AX">3</option>
-                      <option value="AX">4</option>
-                      <option value="AX">5</option>
-                      <option value="AX">6</option>
-                    </select>
-                  </div>  
-                </li>
-                <li class="span1_of_2 left children">
-                  <h5>Children (0-17)</h5>
-                  <!--start section-room-->
-                  <div class="section_room">
-                    <select id="country" onchange="change_country(this.value)" class="frm-field required">
-                      <option value="null">1</option>
-                      <option value="null">2</option>         
-                      <option value="AX">3</option>
-                      <option value="AX">4</option>
-                      <option value="AX">5</option>
-                      <option value="AX">6</option>
-                    </select>
-                  </div>  
-                </li>
-                <li class="span1_of_2 economy">
-                  <h5>Class</h5>
-                  <!--start section-room-->
-                  <div class="section_room">
-                    <select id="country" onchange="change_country(this.value)" class="frm-field required">
-                      <option value="null">Economy</option>
-                      <option value="null">Business</option>     
-                    </select>
-                  </div>  
-                </li>
-              </ul>
-              <div class="clearfix"></div>
-            </div>
-            <div class="reservation">
-              <ul>  
-                <li class="span1_of_3">
-                  <div class="date_btn">
-                    <form>
-                      <input type="submit" value="Submit" />
-                    </form>
-                  </div>
-                </li>
-              </ul>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--//modal-->
+
   <!--welcome-->
   <div class="welcome" id="about">
     <div class="container">
-      <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">About Us</h3>
-      <h4 class="wow fadeInDown animated" data-wow-delay=".7s">Nulla at dolor at ipsum convallis pulvinar a non nunc non leo sollicitudin, tincidunt odio a, rutrum ligula aliquam orci cursus facilisis maximus </h4>
-      <p class="w-text wow fadeInUp animated" data-wow-delay=".2s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida mauris non mi gravida, at sollicitudin odio efficitur. Mauris ex nulla, aliquam ornare facilisis nec convallis pulvinar a non nunc non leo sollicitudin</p>
+      <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">Tentang Sokowolu</h3>
+      <h4 class="wow fadeInDown animated" data-wow-delay=".7s">Desa Wisata yang Ramah, Sejuk, dan Instagrammable</h4>
+      <p class="w-text wow fadeInUp animated" data-wow-delay=".2s">Sokowolu terletak di desa Blablab, kecamatan Blablabla, kabupaten Rablbalba. Memiliki beberapa situs wisata yang wajib dikunjungi bagi blblabl albl abldblas bdalsbd las.</p>
       <div class="welcome-row">
         <div class="col-md-4 welcome-grids wow slideInLeft animated" data-wow-delay=".2s">
           <div class="welcome-img">
             <img src="<?= base_url(); ?>assets/img/img1.jpg" class="img-responsive zoom-img" alt="">
             <div class="welcome-text">
-              <h5>Our Trip</h5>
+              <h5>Blablba</h5>
             </div>
           </div>
         </div>
@@ -251,7 +135,7 @@ Redesign from : W3layouts
           <div class="welcome-img">
             <img src="<?= base_url(); ?>assets/img/img2.jpg" class="img-responsive zoom-img" alt="">
             <div class="welcome-text">
-              <h5>Our Trip</h5>
+              <h5>Blablablab</h5>
             </div>
           </div>
         </div>
@@ -259,7 +143,7 @@ Redesign from : W3layouts
           <div class="welcome-img">
             <img src="<?= base_url(); ?>assets/img/img3.jpg" class="img-responsive zoom-img" alt="">
             <div class="welcome-text">
-              <h5>Our Trip</h5>
+              <h5>Blbalabl</h5>
             </div>
           </div>
         </div>
@@ -272,87 +156,47 @@ Redesign from : W3layouts
   <!--services-->
   <div class="services" id="services">
     <div class="container">
-      <h3 class="title wow fadeInDown animated" data-wow-delay=".5s">Services</h3>
+      <h3 class="title wow fadeInDown animated" data-wow-delay=".5s">Tanggapan Wisatawan</h3>
       <div class="servc-grids">
-        <div class="col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".5s">
+        <div class="col-sm-12 col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".5s">
           <ul> 
             <li>
-              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+              <img src="<?= base_url(); ?>assets/img/g1.jpg" class="img-responsive">
             </li>
             <li>
-              <h4>Cum soluta</h4>
+              <h4>Rindhoni Ahmad</h4>
+              <p class="rev-job">Mahasiswa Universitas Diponegoro</p>
+            </li>
+          </ul> 
+          <div class="clearfix"></div>
+          <p class="rev-desc">"Sangat bagus dan wajib hukumnya bagi setiap wisatawan yang berkunjung ke Salatiga"</p>
+        </div>
+        <div class="col-sm-12 col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".7s">
+          <ul> 
+            <li>
+              <img src="<?= base_url(); ?>assets/img/g2.jpg" class="img-responsive">
+            </li>
+            <li>
+              <h4>Yusuf Abdul Hakim</h4>
+              <p class="rev-job">Presiden Mahasiswa Universitas Diponegoro</p>
             </li>
           </ul> 
           <div class="clearfix"> </div>
-          <p>Itaque earum rerum hic tenetur a sapiente delectus 
-            reiciendis maiores alias consequatur aut</p>
+          <p class="rev-desc">"Tempat wisata yang sangat mengagumkan untuk dikunjungi. Masyarakat sekitar sangat antusias akan para wisatawan Sokowolu ini.</p>
         </div>
-        <div class="col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".7s">
+        <div class="col-sm-12 col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".9s">
           <ul> 
             <li>
-              <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
+              <img src="<?= base_url(); ?>assets/img/g3.jpg" class="img-responsive">
             </li>
             <li>
-              <h4>Nobis esgendi</h4>
+              <h4>Aufal Marom</h4>
+              <p class="rev-job">Ketua Himpunan Mahasiswa Sistem Komputer Undip</p>
             </li>
           </ul> 
           <div class="clearfix"> </div>
-          <p>Itaque earum rerum hic tenetur a sapiente delectus 
-            reiciendis maiores alias consequatur aut</p>
+          <p class="rev-desc">Tidak ada kata yang bisa diungkapkan selain "menakjubkan" untuk tempat wisata ini.</p>
         </div>
-        <div class="col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".9s">
-          <ul> 
-            <li>
-              <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-            </li>
-            <li>
-              <h4>Est eligendi</h4>
-            </li>
-          </ul> 
-          <div class="clearfix"> </div>
-          <p>Itaque earum rerum hic tenetur a sapiente delectus 
-            reiciendis maiores alias consequatur aut</p>
-        </div>
-        <div class="col-md-4 servc-grid servc-grid-btm wow fadeInUp animated" data-wow-delay=".5s">
-          <ul> 
-            <li>
-              <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
-            </li>
-            <li>
-              <h4>Soluta nobis</h4>
-            </li>
-          </ul> 
-          <div class="clearfix"> </div>
-          <p>Itaque earum rerum hic tenetur a sapiente delectus 
-            reiciendis maiores alias consequatur aut</p>
-        </div>
-        <div class="col-md-4 servc-grid servc-grid-btm wow fadeInUp animated" data-wow-delay=".7s">
-          <ul> 
-            <li>
-              <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-            </li>
-            <li>
-              <h4>Msoluta est</h4>
-            </li>
-          </ul> 
-          <div class="clearfix"> </div>
-          <p>Itaque earum rerum hic tenetur a sapiente delectus 
-            reiciendis maiores alias consequatur aut</p>
-        </div>
-        <div class="col-md-4 servc-grid servc-grid-btm wow fadeInUp animated" data-wow-delay=".9s">
-          <ul> 
-            <li>
-              <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
-            </li>
-            <li>
-              <h4>Nobis estli</h4>
-            </li>
-          </ul> 
-          <div class="clearfix"> </div>
-          <p>Itaque earum rerum hic tenetur a sapiente delectus 
-            reiciendis maiores alias consequatur aut</p>
-        </div>
-        <div class="clearfix"> </div>
       </div>
     </div>
   </div>
@@ -361,15 +205,15 @@ Redesign from : W3layouts
   <!--portfolio-->
   <div id="portfolio" class="portfolio">
     <div class="container">
-      <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">Portfolio</h3>
+      <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">Foto Wisata</h3>
       <div class="sap_tabs">      
         <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
           <ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">
-            <li class="resp-tab-item"><span>All</span></li>
-            <li class="resp-tab-item"><span>Children</span></li>
-            <li class="resp-tab-item"><span>Vacation</span></li>
-            <li class="resp-tab-item"><span>HoneyMoon</span></li>
-            <li class="resp-tab-item"><span>Celebrations</span></li>          
+            <li class="resp-tab-item"><span>Semua</span></li>
+            <li class="resp-tab-item"><span>Bukit</span></li>
+            <li class="resp-tab-item"><span>Desa</span></li>
+            <li class="resp-tab-item"><span>Candi</span></li>
+            <li class="resp-tab-item"><span>Lainnya</span></li>          
           </ul> 
           <div class="clearfix"> </div> 
           <div class="resp-tabs-container">
@@ -522,59 +366,66 @@ Redesign from : W3layouts
     </div>
   </div>
   <!--//portfolio-->
-  <!--twitter-->  
-  <div class="twitter">
+
+  <!--blog-->  
+  <div class="blog">
     <div class="container">
-      <div class="social-icons wow zoomIn animated" data-wow-delay=".2s">
-        <ul>
-          <li><a href="#"> </a></li>
-        </ul>
+      <div class="wow zoomIn animated" data-wow-delay=".2s">
+        <div class="newest-blog">
+          <span class="glyphicon glyphicon-leaf"></span>
+        </div>
       </div>
-      <h4 class="wow fadeInUp animated" data-wow-delay=".7s">LATEST FROM TWITTER</h4>
-      <p class="twit-text wow fadeInUp animated" data-wow-delay=".8s">Libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
+      <h4 class="wow fadeInUp animated" data-wow-delay=".7s">BLOG TERBARU</h4>
+      <p class="twit-text wow fadeInUp animated" data-wow-delay=".8s">Menurut Gubernur Jawa Tengah, Sokowolu adalah tempat wisata yang wajib dikunjungi bagi setiap wisatawan Semarang dan sekitarnya... <a href="#">Baca selengkapnya</a></p>
     </div>
   </div>    
-  <!--//twitter-->  
+  <!--//blog-->  
+
   <!--contact -->
   <div class="contact" id="contact">
     <div class="container">
-      <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">Contact Us</h3>
+      <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">Kirim Kritik &amp; Saran</h3>
       <div class="contact-form">
-        <p class="wow slideInDown animated" data-wow-delay=".2s">Sed ut turpis elit ullamcorper in auctor non, accumsan vel lacus nulla auctor cursus nunc. Maecenas ultricies dolor in urna tempus, id egestas erat finibus  interdum lectus eget scelerisque.</p>
+        <p class="wow slideInDown animated" data-wow-delay=".2s">Silahkan kirim kritik dan saran bagi kalian yang sudah mengunjungi Sokowolu. Kirimkan juga pertanyaan kalian jika kalian berminat mengunjungi Sokowolu.</p>
         <form>
           <div class="col-md-6 form-left wow fadeInDown animated" data-wow-delay=".2s">
-            <input type="text" placeholder="Name" required="">
+            <input type="text" name="nama" placeholder="Nama" required>
           </div>
+          
           <div class="col-md-6 form-right wow fadeInDown animated" data-wow-delay=".2s">
-            <input class="email" type="text" placeholder="Email" required="">
+            <input type="text" class="email" name="email" placeholder="Email" required>
           </div>
+
           <div class="clearfix"> </div>
-          <input class="wow fadeInDown animated" data-wow-delay=".7s" type="text" placeholder="Phone" required="">
-          <textarea class="wow fadeInDown animated" data-wow-delay=".9s" placeholder="Message" required=""></textarea>
-          <input type="submit" value="SUBMIT" >
+          
+          <textarea class="wow fadeInDown animated" data-wow-delay=".9s" placeholder="Pesan" required></textarea>
+          
+          <input type="submit" name="kirim" value="Kirim">
         </form>
       </div>
     </div>
   </div>    
   <!--//contact -->
+
   <!--address-->
   <div class="address wow fadeInDown animated" data-wow-delay=".2s">
     <div class="container">
       <ul>
-        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Broome St, Canada, NY 10002, USA</li>
-        <li><i class="phon">Call Us :</i>  +01 111 222 3333</li>
-        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com"> mail@example.com</a></li>
+        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Kecamatan Blabla, Kabupaten Balbalba, Desa Blablab</li>
+        <li></li>
+        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>me@example.com</li>
       </ul>
     </div>
   </div>
   <!--//address-->
+  
   <!--map-->
   <div class="map">
     <ul class="faq">
-      <li class="item1 wow fadeInDown animated" data-wow-delay=".2s"><a href="#">Interactive Route Map<span class="glyphicon glyphicon-menu-down"></span></a>
+      <li class="item1 wow fadeInDown animated" data-wow-delay=".2s"><a href="#">Lihat Peta Sokowolu<span class="glyphicon glyphicon-menu-down"></span></a>
         <ul>
           <li class="subitem1">
-            <iframe data-wow-delay=".2s" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555"></iframe>
+            <iframe data-wow-delay=".2s" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.538254640682!2d110.45580631477563!3d-7.405518994656809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a7bb9133ce227%3A0x946b3c7ec3b46c0c!2sSOKOWOLU%2CTAJUK%2CKEC.GETASAN%2CKAB.SEMARANG!5e0!3m2!1sen!2sid!4v1520784318890"></iframe>
           </li>                   
         </ul>
       </li>
@@ -608,8 +459,8 @@ Redesign from : W3layouts
   <!--footer-->
   <div class="footer">
     <div class="container">
-      <h3 class="wow zoomIn animated" data-wow-delay=".2s"><a href="index.html">Vacation</a></h3>
-      <p class="wow fadeInUp animated" data-wow-delay=".7s">© 2016 Vacation. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+      <h3 class="wow zoomIn animated" data-wow-delay=".2s"><a href="index.html">Sokowolu</a></h3>
+      <p class="wow fadeInUp animated" data-wow-delay=".7s">© 2018 Sokowolu. All rights reserved | Developed by <a href="http://himaskom.undip.ac.id">HIMASKOM UNDIP</a></p>
       <div class="social-icons wow fadeInUp animated" data-wow-delay=".9s">
         <ul>
           <li><a href="#"> </a></li>
