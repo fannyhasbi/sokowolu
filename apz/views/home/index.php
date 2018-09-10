@@ -132,7 +132,7 @@ Redesign from : W3layouts
         </div>
         <div class="col-md-4 welcome-grids grid wow zoomIn animated" data-wow-delay=".2s">
           <div class="welcome-img">
-            <img src="<?= base_url(); ?>assets/img/img2.jpg" class="img-responsive zoom-img" alt="">
+            <img src="<?= base_url(); ?>assets/img/img1.jpg" class="img-responsive zoom-img" alt="">
             <div class="welcome-text">
               <h5>Blablablab</h5>
             </div>
@@ -140,7 +140,7 @@ Redesign from : W3layouts
         </div>
         <div class="col-md-4 welcome-grids grid wow slideInRight animated" data-wow-delay=".2s">
           <div class="welcome-img">
-            <img src="<?= base_url(); ?>assets/img/img3.jpg" class="img-responsive zoom-img" alt="">
+            <img src="<?= base_url(); ?>assets/img/img1.jpg" class="img-responsive zoom-img" alt="">
             <div class="welcome-text">
               <h5>Blbalabl</h5>
             </div>
@@ -160,7 +160,7 @@ Redesign from : W3layouts
         <div class="col-sm-12 col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".5s">
           <ul> 
             <li>
-              <img src="<?= base_url(); ?>assets/img/g1.jpg" class="img-responsive">
+              <img src="<?= base_url(); ?>assets/img/img1.jpg" class="img-responsive">
             </li>
             <li>
               <h4>Rindhoni Ahmad</h4>
@@ -173,7 +173,7 @@ Redesign from : W3layouts
         <div class="col-sm-12 col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".7s">
           <ul> 
             <li>
-              <img src="<?= base_url(); ?>assets/img/g2.jpg" class="img-responsive">
+              <img src="<?= base_url(); ?>assets/img/img1.jpg" class="img-responsive">
             </li>
             <li>
               <h4>Yusuf Abdul Hakim</h4>
@@ -186,7 +186,7 @@ Redesign from : W3layouts
         <div class="col-sm-12 col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".9s">
           <ul> 
             <li>
-              <img src="<?= base_url(); ?>assets/img/g3.jpg" class="img-responsive">
+              <img src="<?= base_url(); ?>assets/img/img1.jpg" class="img-responsive">
             </li>
             <li>
               <h4>Aufal Marom</h4>
@@ -208,21 +208,21 @@ Redesign from : W3layouts
       <div class="sap_tabs">
         <div class="row">
           <div class="col-md-4">
-            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/g1.jpg);" href="#">
+            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/img1.jpg);" href="#">
               <div class="details">
                 <h4>Top Vacations</h4>
               </div>
             </a>
           </div>
           <div class="col-md-4">
-            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/g2.jpg);" href="#">
+            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/img1.jpg);" href="#">
               <div class="details">
                 <h4>Top Vacations</h4>
               </div>
             </a>
           </div>
           <div class="col-md-4">
-            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/g3.jpg);" href="#">
+            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/img1.jpg);" href="#">
               <div class="details">
                 <h4>Top Vacations</h4>
               </div>
@@ -230,21 +230,21 @@ Redesign from : W3layouts
           </div>
 
           <div class="col-md-4">
-            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/g4.jpg);" href="#">
+            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/img1.jpg);" href="#">
               <div class="details">
                 <h4>Top Vacations</h4>
               </div>
             </a>
           </div>
           <div class="col-md-4">
-            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/g5.jpg);" href="#">
+            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/img1.jpg);" href="#">
               <div class="details">
                 <h4>Top Vacations</h4>
               </div>
             </a>
           </div>
           <div class="col-md-4">
-            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/g6.jpg);" href="#">
+            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/img1.jpg);" href="#">
               <div class="details">
                 <h4>Top Vacations</h4>
               </div>
