@@ -59,7 +59,7 @@
           <div class="collapse navbar-collapse justify-content-end">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('editor/logout'); ?>">
+                <a class="nav-link" href="<?= site_url('editor/logout'); ?>" title="Logout">
                   <i class="material-icons">exit_to_app</i>
                   <p class="d-lg-none d-md-block">Logout</p>
                 </a>
