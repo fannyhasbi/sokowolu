@@ -20,7 +20,7 @@ class Editor extends CI_Controller {
   }
 
   private function dashboard(){
-    // to do
+    $this->load->view('editor/dashboard');
   }
 
   public function login(){
