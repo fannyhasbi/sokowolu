@@ -10,18 +10,22 @@
             <thead class=" text-primary">
               <th>No.</th>
               <th>Judul</th>
-              <th>Terakhir Diupdate</th>
+              <th>Tanggal</th>
               <th>Penulis</th>
               <th>Dilihat</th>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Introduction Sokowolu</td>
-                <td>20 September 2018</td>
-                <td>Fanny</td>
-                <td>20</td>
-              </tr>
+              <?php $n = 1; foreach($articles as $article): ?>
+                <tr>
+                  <td><?= $n; ?></td>
+                  <td><?= $article->name; ?></td>
+                  <td><?= $article->created_at; ?></td>
+                  <td>
+                    <?= explode(' ', $article->editor_name)[0]; ?>
+                  </td>
+                  <td><?= $article->views_count; ?></td>
+                </tr>
+              <?php $n++; endforeach; ?>
             </tbody>
           </table>
         </div>
