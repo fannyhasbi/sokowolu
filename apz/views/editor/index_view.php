@@ -33,6 +33,12 @@
               <p>Dashboard</p>
             </a>
           </li>
+          <li class="nav-item <?= uri_string() == 'editor/article' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?= site_url('editor/article'); ?>">
+              <i class="material-icons">file_copy</i>
+              <p>Artikel</p>
+            </a>
+          </li>
           <li class="nav-item <?= uri_string() == 'editor/profile' ? 'active' : '' ?>">
             <a class="nav-link" href="<?= site_url('editor/profile'); ?>">
               <i class="material-icons">person</i>

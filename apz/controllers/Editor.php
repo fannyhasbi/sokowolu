@@ -94,4 +94,9 @@ class Editor extends CI_Controller {
     }
   }
 
+  public function article(){
+    $data['view_name'] = 'article';
+    $this->load->view('editor/index_view', $data);
+  }
+
 }
