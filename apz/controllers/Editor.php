@@ -20,7 +20,8 @@ class Editor extends CI_Controller {
   }
 
   private function dashboard(){
-    $this->load->view('editor/dashboard');
+    $data['view_name'] = 'dashboard';
+    $this->load->view('editor/index_view', $data);
   }
 
   public function login(){
@@ -54,8 +55,9 @@ class Editor extends CI_Controller {
       redirect(site_url('editor/login'));
     }
     else {
+      $data['view_name'] = 'login';
       $data['message'] = $this->session->flashdata('msg');
-      $this->load->view('editor/login', $data);
+      $this->load->view('editor/index_view', $data);
     }
   }
 
@@ -87,7 +89,8 @@ class Editor extends CI_Controller {
       }
     }
     else {
-      $this->load->view('editor/profile');
+      $data['view_name'] = 'profile';
+      $this->load->view('editor/index_view', $data);
     }
   }
 
