@@ -23,9 +23,15 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?= site_url('editor'); ?>">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= site_url('editor/profile'); ?>">
+              <i class="material-icons">person</i>
+              <p>Profil</p>
             </a>
           </li>
         </ul>
