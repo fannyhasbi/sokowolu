@@ -74,7 +74,17 @@ class Editor extends CI_Controller {
       redirect(site_url('editor/profile'));
     }
     else if($this->input->post('save-password')){
+      if(strlen($this->input->post('password')) < 6){
+        redirect(site_url('editor/profile'));
+      }
+      if($this->input->post('password') !== $this->input->post('password2')){
+        redirect(site_url('editor/profile'));
+      }
+      else {
+        $this->editor_model->updatePassword();
 
+        redirect(site_url('editor/profile'));
+      }
     }
     else {
       $this->load->view('editor/profile');
