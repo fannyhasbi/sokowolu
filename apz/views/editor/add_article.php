@@ -11,7 +11,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label class="bmd-label-floating">Judul</label>
-                <input type="text" class="form-control" name="judul" required autofocus>
+                <input type="text" class="form-control" name="name" required autofocus>
               </div>
             </div>
           </div>
@@ -20,7 +20,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label class="bmd-label-floating">Isi</label>
-                <textarea id="article-editor" class="form-control" name="content"></textarea>
+                <textarea id="article-editor" class="form-control" name="content" required></textarea>
               </div>
             </div>
           </div>
