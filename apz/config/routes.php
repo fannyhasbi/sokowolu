@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 // Editor
 $route['editor'] = 'editor';
+$route['editor/profile'] = 'editor/profile';
 $route['editor/login'] = 'editor/login';
 $route['editor/logout'] = 'editor/logout';
 
