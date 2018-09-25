@@ -64,4 +64,8 @@ class Editor extends CI_Controller {
     redirect(site_url());
   }
 
+  public function profile(){    
+    $this->load->view('editor/profile');
+  }
+
 }
