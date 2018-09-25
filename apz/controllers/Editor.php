@@ -37,6 +37,7 @@ class Editor extends CI_Controller {
 
         if(password_verify($password, $editor->password)){
           $session_data = array(
+            'id' => $editor->id,
             'editor_login' => true,
             'name' => $editor->name,
             'username' => $editor->username
@@ -64,8 +65,20 @@ class Editor extends CI_Controller {
     redirect(site_url());
   }
 
-  public function profile(){    
-    $this->load->view('editor/profile');
+  public function profile(){
+    if($this->input->post('save')){
+      $this->editor_model->updateName();
+
+      $this->session->set_userdata(['name' => $this->input->post('name')]);
+
+      redirect(site_url('editor/profile'));
+    }
+    else if($this->input->post('save-password')){
+
+    }
+    else {
+      $this->load->view('editor/profile');
+    }
   }
 
 }

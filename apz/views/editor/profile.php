@@ -85,13 +85,19 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
+                          <label class="bmd-label-floating">Username</label>
+                          <input type="text" class="form-control" value="fannyhasbi" readonly disabled>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
                           <label class="bmd-label-floating">Nama</label>
-                          <input type="text" class="form-control" name="name" value="">
+                          <input type="text" class="form-control" name="name" value="<?= $this->session->userdata('name'); ?>" required>
                         </div>
                       </div>
                     </div>
 
-                    <input type="submit" class="btn btn-primary" name="save" value="Simpan">
+                    <input type="submit" class="btn btn-primary" name="save" value="Simpan Nama">
                     <div class="clearfix"></div>
                   </form>
 
@@ -103,18 +109,18 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Password</label>
-                          <input type="password" id="pass1" class="form-control" name="password">
+                          <input type="password" id="pass1" class="form-control" name="password" required>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Ulangi Password</label>
-                          <input type="password" id="pass2" class="form-control" name="password2">
+                          <input type="password" id="pass2" class="form-control" name="password2" required>
                         </div>
                       </div>
                     </div>
 
-                    <input type="submit" id="btn" class="btn btn-primary" name="save-password" value="Simpan">
+                    <input type="submit" id="btn" class="btn btn-primary" name="save-password" value="Simpan Password">
                     <div class="clearfix"></div>
                   </form>
                 </div>
