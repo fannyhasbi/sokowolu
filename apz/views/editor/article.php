@@ -1,5 +1,11 @@
 <div class="row">
   <div class="col-md-12">
+    <a href="<?= site_url('editor/add-article'); ?>" class="btn btn-primary">
+      <i class="material-icons">add</i> Tambah
+    </a>
+  </div>
+
+  <div class="col-md-12">
     <div class="card">
       <div class="card-header card-header-info">
         <h4 class="card-title ">Daftar Artikel</h4>

@@ -9,6 +9,7 @@ $route['editor/logout'] = 'editor/logout';
 
 // Article
 $route['editor/article'] = 'editor/article';
+$route['editor/add-article'] = 'editor/add_article';
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
