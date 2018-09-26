@@ -54,7 +54,7 @@
 <script>
 function delete_article(id, name){
   swal({
-    text: 'Yakin ingin menghapus artikel ini?',
+    text: 'Yakin ingin menghapus artikel '+ name +'?',
     icon: 'warning',
     dangerMode: true,
     buttons: {
