@@ -22,7 +22,7 @@
             </div>
           </div>
 
-          <input type="submit" class="btn btn-primary" name="save" value="Simpan Nama">
+          <input type="submit" class="btn btn-success" name="save" value="Simpan Nama">
           <div class="clearfix"></div>
         </form>
 
@@ -45,7 +45,7 @@
             </div>
           </div>
 
-          <input type="submit" id="btn" class="btn btn-primary" name="save-password" value="Simpan Password">
+          <input type="submit" id="btn" class="btn btn-success" name="save-password" value="Simpan Password">
           <div class="clearfix"></div>
         </form>
       </div>
