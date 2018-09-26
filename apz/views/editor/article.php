@@ -53,9 +53,22 @@
 
 <script>
 function delete_article(id, name){
-  var j = confirm("Yakin ingin menghapus artikel "+ name + "?");
-  if(j){
-    window.location = "<?= site_url('editor/delete-article/'); ?>"+ id;
-  }
+  swal({
+    text: 'Yakin ingin menghapus artikel ini?',
+    icon: 'warning',
+    dangerMode: true,
+    buttons: {
+      cancel: 'Tidak',
+      confirm: {
+        text: 'Hapus',
+        value: 'delete'
+      }
+    }
+  })
+  .then((value) => {
+    if(value == 'delete'){
+      window.location = "<?= site_url('editor/delete-article/'); ?>"+ id;
+    }
+  });
 }
 </script>
