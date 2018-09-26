@@ -17,6 +17,9 @@
   <script src="<?= base_url(); ?>assets/js/tinymce/tinymce.min.js"></script>
   <script src="<?= base_url(); ?>assets/js/tinymce/editor.js"></script>
 
+  <!-- SweetAlert -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   <!--   Core JS Files   -->
   <script src="<?= base_url(); ?>assets/js/jquery.min.js" type="text/javascript"></script>
   <script src="<?= base_url(); ?>assets/js/popper.min.js" type="text/javascript"></script>
@@ -109,6 +112,15 @@
       <!-- End Footer -->
     </div>
   </div>
+
+  <script>
+    var msg = '<?= $this->session->flashdata('msg') ?>';
+    var type = '<?= $this->session->flashdata('type') ?>';
+
+    if(msg.length !== 0){
+      swal('', msg, type);
+    }
+  </script>
 
   <script src="<?= base_url(); ?>assets/js/perfect-scrollbar.jquery.min.js"></script>
   <!--  Notifications Plugin    -->

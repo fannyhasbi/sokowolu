@@ -72,19 +72,19 @@ class Editor extends CI_Controller {
 
       $this->session->set_userdata(['name' => $this->input->post('name')]);
 
-      redirect(site_url('editor/profile'));
+      notify('Perubahan berhasil disimpan', 'success', 'editor/profile');
     }
     else if($this->input->post('save-password')){
       if(strlen($this->input->post('password')) < 6){
-        redirect(site_url('editor/profile'));
+        notify('Password harus lebih dari 5 karakter', 'error', 'editor/profile');
       }
       if($this->input->post('password') !== $this->input->post('password2')){
-        redirect(site_url('editor/profile'));
+        notify('Password harus sama', 'error', 'editor/profile');
       }
       else {
         $this->editor_model->updatePassword();
 
-        redirect(site_url('editor/profile'));
+        notify('Password berhasil disimpan', 'success', 'editor/profile');
       }
     }
     else {
@@ -107,7 +107,7 @@ class Editor extends CI_Controller {
       
       $this->article_model->add();
 
-      redirect(site_url('editor/article'));
+      notify('Artikel berhasil ditambahkan', 'success', 'editor/article');
     }
     else {
       $data['view_name'] = 'add_article';
@@ -121,17 +121,15 @@ class Editor extends CI_Controller {
     // Check the slug if it exists
     if($this->article_model->checkBySlug($slug)->num_rows() > 0){
       if($this->input->post('save-article')){
-
         $this->article_model->update($slug);
-
-        redirect(site_url('editor/article'));
+        notify('Artikel berhasil disimpan', 'success', 'editor/article');
       }
       else {
         $data['article'] = $this->article_model->getBySlug($slug);
       }
     }
     else {
-      redirect(site_url('editor/article'));
+      notify('Artikel tidak ditemukan', 'error', 'editor/article');
     }
 
     $data['view_name'] = 'edit_article';
@@ -145,10 +143,10 @@ class Editor extends CI_Controller {
     if($this->article_model->checkById($id)->num_rows() > 0){
       $this->article_model->delete($id);
 
-      redirect(site_url('editor/article'));
+      notify('Artikel berhasil dihapus', 'success', 'editor/article');
     }
     else {
-      redirect(site_url('editor/article'));
+      notify('Artikel tidak ditemukan', 'error', 'editor/article');
     }
   }
 
