@@ -49,9 +49,13 @@ class Article_model extends CI_Model {
 
   public function update($slug){
     $this->db->where('slug', $slug);
+
+    $new_slug = $this->purify_slug($this->input->post('name'));
+
     $data = array(
       'name' => $this->input->post('name'),
-      'content' => $this->input->post('content')
+      'content' => $this->input->post('content'),
+      'slug' => $new_slug
     );
 
     $this->db->update('article', $data);
