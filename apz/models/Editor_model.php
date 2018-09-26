@@ -11,6 +11,23 @@ class Editor_model extends CI_Model {
     return $q->row();
   }
 
+  public function getArticleSummary(){
+    $this->db->select('COUNT(*) AS article_count');
+    $this->db->from('article');
+    $q = $this->db->get();
+    return $q->row();
+  }
+
+  public function getLastArticle(){
+    $this->db->select('created_at');
+    $this->db->from('article');
+    $this->db->order_by('created_at', 'DESC');
+    $this->db->limit(1);
+    $q = $this->db->get();
+
+    return $q->row();
+  }
+
   public function updateName(){
     $this->db->where('id', $this->session->userdata('id'));
     

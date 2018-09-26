@@ -22,11 +22,11 @@
           <i class="material-icons">file_copy</i>
         </div>
         <p class="card-category">Artikel</p>
-        <h3 class="card-title">13</h3>
+        <h3 class="card-title"><?= $summary['article']['count']; ?></h3>
       </div>
       <div class="card-footer">
         <div class="stats">
-          <i class="material-icons">date_range</i> 25 Juli 2018
+          <i class="material-icons">date_range</i> <?= date_definer($summary['article']['last']); ?>
         </div>
       </div>
     </div>
