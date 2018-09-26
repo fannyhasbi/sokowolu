@@ -27,13 +27,13 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item <?= uri_string() == 'editor' ? 'active' : '' ?>">
+          <li class="nav-item <?= editor_active_link('dashboard', uri_string()) ?>">
             <a class="nav-link" href="<?= site_url('editor'); ?>">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item <?= uri_string() == 'editor/article' ? 'active' : '' ?>">
+          <li class="nav-item <?= editor_active_link('article', uri_string()) ?>">
             <a class="nav-link" href="<?= site_url('editor/article'); ?>">
               <i class="material-icons">file_copy</i>
               <p>Artikel</p>
