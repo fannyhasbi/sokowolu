@@ -20,12 +20,12 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label class="bmd-label-floating">Isi</label>
-                <textarea id="article-editor" class="form-control" name="content" required></textarea>
+                <textarea id="article-editor" class="form-control" name="content"></textarea>
               </div>
             </div>
           </div>
 
-          <input type="submit" class="btn btn-primary pull-right" name="add-article" value="Tambah">
+          <input type="submit" class="btn btn-primary pull-right" name="add-article" value="Publish">
           <div class="clearfix"></div>
         </form>
       </div>

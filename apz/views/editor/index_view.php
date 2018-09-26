@@ -13,6 +13,10 @@
   <!-- CSS Files -->
   <link href="<?= base_url(); ?>assets/css/material-dashboard.css" rel="stylesheet" />
 
+  <!-- TinyMCE -->
+  <script src="<?= base_url(); ?>assets/js/tinymce/tinymce.min.js"></script>
+  <script src="<?= base_url(); ?>assets/js/tinymce/editor.js"></script>
+
   <!--   Core JS Files   -->
   <script src="<?= base_url(); ?>assets/js/jquery.min.js" type="text/javascript"></script>
   <script src="<?= base_url(); ?>assets/js/popper.min.js" type="text/javascript"></script>
