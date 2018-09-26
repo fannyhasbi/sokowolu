@@ -25,7 +25,7 @@
                 <tr>
                   <td><?= $n; ?></td>
                   <td><?= $article->name; ?></td>
-                  <td><?= $article->created_at; ?></td>
+                  <td><?= date_definer($article->created_at); ?></td>
                   <td>
                     <?= explode(' ', $article->editor_name)[0]; ?>
                   </td>
