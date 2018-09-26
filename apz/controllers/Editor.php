@@ -116,6 +116,24 @@ class Editor extends CI_Controller {
   }
 
   public function edit_article($slug){
+    $this->load->model('article_model');
+
+    // Check the slug if it exists
+    if($this->article_model->checkBySlug($slug)->num_rows() > 0){
+      if($this->input->post('save-article')){
+
+        $this->article_model->update($slug);
+
+        redirect(site_url('editor/article'));
+      }
+      else {
+        $data['article'] = $this->article_model->getBySlug($slug);
+      }
+    }
+    else {
+      redirect(site_url('editor/article'));
+    }
+
     $data['view_name'] = 'edit_article';
     $this->load->view('editor/index_view', $data);
   }

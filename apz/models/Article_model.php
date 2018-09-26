@@ -15,6 +15,10 @@ class Article_model extends CI_Model {
     return $r;
   }
 
+  public function checkBySlug($slug){
+    return $this->db->get_where('article', ['slug' => $slug]);
+  }
+
   public function get(){
     $this->db->select('article.id, article.name, article.slug, article.created_at, article.views_count, editor.name AS editor_name');
     $this->db->from('article');
@@ -23,6 +27,11 @@ class Article_model extends CI_Model {
     $q = $this->db->get();
     
     return $q->result();
+  }
+
+  public function getBySlug($slug){
+    $q = $this->db->get_where('article', ['slug' => $slug]);
+    return $q->row();
   }
 
   public function add(){
@@ -36,6 +45,16 @@ class Article_model extends CI_Model {
     );
 
     $this->db->insert('article', $data);
+  }
+
+  public function update($slug){
+    $this->db->where('slug', $slug);
+    $data = array(
+      'name' => $this->input->post('name'),
+      'content' => $this->input->post('content')
+    );
+
+    $this->db->update('article', $data);
   }
 
 }
