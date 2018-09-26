@@ -13,6 +13,10 @@
   <!-- CSS Files -->
   <link href="<?= base_url(); ?>assets/css/material-dashboard.css" rel="stylesheet" />
 
+  <!-- TinyMCE -->
+  <script src="<?= base_url(); ?>assets/js/tinymce/tinymce.min.js"></script>
+  <script src="<?= base_url(); ?>assets/js/tinymce/editor.js"></script>
+
   <!--   Core JS Files   -->
   <script src="<?= base_url(); ?>assets/js/jquery.min.js" type="text/javascript"></script>
   <script src="<?= base_url(); ?>assets/js/popper.min.js" type="text/javascript"></script>
@@ -27,10 +31,16 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item <?= uri_string() == 'editor' ? 'active' : '' ?>">
+          <li class="nav-item <?= editor_active_link('dashboard', uri_string()) ?>">
             <a class="nav-link" href="<?= site_url('editor'); ?>">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item <?= editor_active_link('article', uri_string()) ?>">
+            <a class="nav-link" href="<?= site_url('editor/article'); ?>">
+              <i class="material-icons">file_copy</i>
+              <p>Artikel</p>
             </a>
           </li>
           <li class="nav-item <?= uri_string() == 'editor/profile' ? 'active' : '' ?>">
@@ -48,7 +58,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#">Profil</a>
+            <a class="navbar-brand" href="#"><?= editor_brand_link(uri_string()); ?></a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>

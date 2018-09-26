@@ -55,9 +55,8 @@ class Editor extends CI_Controller {
       redirect(site_url('editor/login'));
     }
     else {
-      $data['view_name'] = 'login';
       $data['message'] = $this->session->flashdata('msg');
-      $this->load->view('editor/index_view', $data);
+      $this->load->view('editor/login', $data);
     }
   }
 
@@ -91,6 +90,65 @@ class Editor extends CI_Controller {
     else {
       $data['view_name'] = 'profile';
       $this->load->view('editor/index_view', $data);
+    }
+  }
+
+  public function article(){
+    $this->load->model('article_model');
+
+    $data['articles'] = $this->article_model->get();
+    $data['view_name'] = 'article';
+    $this->load->view('editor/index_view', $data);
+  }
+
+  public function add_article(){
+    if($this->input->post('add-article')){
+      $this->load->model('article_model');
+      
+      $this->article_model->add();
+
+      redirect(site_url('editor/article'));
+    }
+    else {
+      $data['view_name'] = 'add_article';
+      $this->load->view('editor/index_view', $data);
+    }
+  }
+
+  public function edit_article($slug){
+    $this->load->model('article_model');
+
+    // Check the slug if it exists
+    if($this->article_model->checkBySlug($slug)->num_rows() > 0){
+      if($this->input->post('save-article')){
+
+        $this->article_model->update($slug);
+
+        redirect(site_url('editor/article'));
+      }
+      else {
+        $data['article'] = $this->article_model->getBySlug($slug);
+      }
+    }
+    else {
+      redirect(site_url('editor/article'));
+    }
+
+    $data['view_name'] = 'edit_article';
+    $this->load->view('editor/index_view', $data);
+  }
+
+  public function delete_article($id){
+    $this->load->model('article_model');
+
+    // Check if id is exist
+    if($this->article_model->checkById($id)->num_rows() > 0){
+      $this->article_model->delete($id);
+
+      redirect(site_url('editor/article'));
+    }
+    else {
+      redirect(site_url('editor/article'));
     }
   }
 
