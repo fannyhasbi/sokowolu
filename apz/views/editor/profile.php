@@ -60,12 +60,14 @@ $(function () {
     var password2 = $("#pass2").val();
 
     if(password.length < 6){
-      alert('Password harus lebih dari 5 karakter');
+      // alert('Password harus lebih dari 5 karakter');
+      swal('', 'Password harus lebih dari 5 karakter', 'warning');
       return false;
     }
 
     if (password != password2) {
-      alert('Password harus sama');
+      // alert('Password harus sama');
+      swal('', 'Password harus sama', 'warning');
       return false;
     }
 
