@@ -22,7 +22,7 @@
             </div>
           </div>
 
-          <input type="submit" class="btn btn-primary" name="save" value="Simpan Nama">
+          <input type="submit" class="btn btn-success" name="save" value="Simpan Nama">
           <div class="clearfix"></div>
         </form>
 
@@ -45,7 +45,7 @@
             </div>
           </div>
 
-          <input type="submit" id="btn" class="btn btn-primary" name="save-password" value="Simpan Password">
+          <input type="submit" id="btn" class="btn btn-success" name="save-password" value="Simpan Password">
           <div class="clearfix"></div>
         </form>
       </div>
@@ -60,12 +60,14 @@ $(function () {
     var password2 = $("#pass2").val();
 
     if(password.length < 6){
-      alert('Password harus lebih dari 5 karakter');
+      // alert('Password harus lebih dari 5 karakter');
+      swal('', 'Password harus lebih dari 5 karakter', 'warning');
       return false;
     }
 
     if (password != password2) {
-      alert('Password harus sama');
+      // alert('Password harus sama');
+      swal('', 'Password harus sama', 'warning');
       return false;
     }
 
