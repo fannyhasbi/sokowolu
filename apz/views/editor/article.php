@@ -31,9 +31,15 @@
                   </td>
                   <td><?= $article->views_count; ?></td>
                   <td>
-                    <a href="<?= site_url('editor/article/'.$article->slug); ?>" rel="tooltip" title="Edit" class="btn btn-info btn-link btn-sm">
+                    <a href="<?= site_url(); ?>" rel="tooltip" title="Lihat" class="btn btn-info btn-link btn-sm" target="_blank">
+                      <i class="material-icons">visibility</i>
+                    </a>
+                    <a href="<?= site_url('editor/article/'.$article->slug); ?>" rel="tooltip" title="Edit" class="btn btn-default btn-link btn-sm">
                       <i class="material-icons">edit</i>
                     </a>
+                    <button rel="tooltip" title="Hapus" class="btn btn-danger btn-link btn-sm" onclick="delete_article(<?= $article->id; ?>, '<?= $article->name; ?>')">
+                      <i class="material-icons">delete</i>
+                    </button>
                   </td>
                 </tr>
               <?php $n++; endforeach; ?>
@@ -44,3 +50,12 @@
     </div>
   </div>
 </div>
+
+<script>
+function delete_article(id, name){
+  var j = confirm("Yakin ingin menghapus artikel "+ name + "?");
+  if(j){
+    window.location = "<?= site_url('editor/delete-article/'); ?>"+ id;
+  }
+}
+</script>

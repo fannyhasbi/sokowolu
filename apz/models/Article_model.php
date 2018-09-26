@@ -15,6 +15,10 @@ class Article_model extends CI_Model {
     return $r;
   }
 
+  public function checkById($id){
+    return $this->db->get_where('article', ['id' => $id]);
+  }
+
   public function checkBySlug($slug){
     return $this->db->get_where('article', ['slug' => $slug]);
   }
@@ -59,6 +63,11 @@ class Article_model extends CI_Model {
     );
 
     $this->db->update('article', $data);
+  }
+
+  public function delete($id){
+    $this->db->where('id', $id);
+    $this->db->delete('article');
   }
 
 }

@@ -138,4 +138,18 @@ class Editor extends CI_Controller {
     $this->load->view('editor/index_view', $data);
   }
 
+  public function delete_article($id){
+    $this->load->model('article_model');
+
+    // Check if id is exist
+    if($this->article_model->checkById($id)->num_rows() > 0){
+      $this->article_model->delete($id);
+
+      redirect(site_url('editor/article'));
+    }
+    else {
+      redirect(site_url('editor/article'));
+    }
+  }
+
 }
