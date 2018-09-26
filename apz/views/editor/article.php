@@ -30,6 +30,11 @@
                     <?= explode(' ', $article->editor_name)[0]; ?>
                   </td>
                   <td><?= $article->views_count; ?></td>
+                  <td>
+                    <a href="<?= site_url('editor/article/'.$article->slug); ?>" rel="tooltip" title="Edit" class="btn btn-info btn-link btn-sm">
+                      <i class="material-icons">edit</i>
+                    </a>
+                  </td>
                 </tr>
               <?php $n++; endforeach; ?>
             </tbody>
