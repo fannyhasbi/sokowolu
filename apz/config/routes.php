@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // Editor
 $route['editor'] = 'editor';
 $route['editor/profile'] = 'editor/profile';
-$route['editor/login'] = 'editor/login';
-$route['editor/logout'] = 'editor/logout';
+$route['editor/login'] = 'home/login_editor';
+$route['editor/logout'] = 'home/logout_editor';
 
 // Article
 $route['editor/article/(:any)'] = 'editor/edit_article/$1';
