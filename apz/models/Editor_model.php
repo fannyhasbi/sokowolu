@@ -28,6 +28,13 @@ class Editor_model extends CI_Model {
     return $q->row();
   }
 
+  public function getArticleViewCount(){
+    $this->db->select_sum('views_count', 'views');
+    $q = $this->db->get('article');
+
+    return $q->row();
+  }
+
   public function updateName(){
     $this->db->where('id', $this->session->userdata('id'));
     
