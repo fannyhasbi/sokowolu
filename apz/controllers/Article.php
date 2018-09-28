@@ -9,10 +9,13 @@ class Article extends CI_Controller {
 
   public function index(){
     $data['articles'] = $this->article_model->getAll();
-    $this->load->view('article/index', $data);
+
+    $data['view_name'] = 'index';
+    $this->load->view('article/index_view', $data);
   }
 
   public function detail(){
-    $this->load->view('article/detail');
+    $data['view_name'] = 'detail';
+    $this->load->view('article/index_view', $data);
   }
 }
