@@ -14,7 +14,12 @@ class Article extends CI_Controller {
     $this->load->view('article/index_view', $data);
   }
 
-  public function detail(){
+  public function detail($slug){
+    if($this->article_model->checkBySlug($slug)->num_rows() == 0)
+      show_404();
+
+    $data['article'] = $this->article_model->getBySlug($slug);
+
     $data['view_name'] = 'detail';
     $this->load->view('article/index_view', $data);
   }

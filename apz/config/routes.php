@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 // Article Page
 $route['article'] = 'article';
-$route['article/(:any)'] = 'article/detail';
+$route['article/(:any)'] = 'article/detail/$1';
 
 // Editor
 $route['editor'] = 'editor';
