@@ -6,7 +6,7 @@
           <i class="material-icons">visibility</i>
         </div>
         <p class="card-category">Kunjungan</p>
-        <h3 class="card-title">180</h3>
+        <h3 class="card-title"><?= $summary['general']['visit']; ?></h3>
       </div>
       <div class="card-footer">
         <div class="stats">
