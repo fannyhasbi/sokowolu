@@ -1,13 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+// Article Page
+$route['article'] = 'article';
+
 // Editor
 $route['editor'] = 'editor';
 $route['editor/profile'] = 'editor/profile';
 $route['editor/login'] = 'home/login_editor';
 $route['editor/logout'] = 'home/logout_editor';
 
-// Article
+// Article Editor
 $route['editor/article/(:any)'] = 'editor/edit_article/$1';
 $route['editor/article'] = 'editor/article';
 $route['editor/add-article'] = 'editor/add_article';
