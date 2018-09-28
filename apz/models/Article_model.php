@@ -47,6 +47,14 @@ class Article_model extends CI_Model {
     return $q->row();
   }
 
+  public function getLatest(){
+    $this->db->order_by('created_at', 'DESC');
+    $this->db->limit(1);
+    $q = $this->db->get('article');
+    
+    return $q->row();
+  }
+
   public function add(){
     $slug = $this->purify_slug($this->input->post('name'));
 
