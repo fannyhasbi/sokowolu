@@ -77,30 +77,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <div class="content-grids">
         <div class="col-md-8 content-main">
           <div class="content-grid">
-            <div class="content-grid-info">
-              <img src="<?= base_url(); ?>assets/img/bg1.jpg" class="content-img" alt=""/>
-              <div class="post-info">
-                <h4><a href="single.html">Lorem ipsum dolor sit amet</a>  July 30, 2014 / 27 Comments</h4>
-                <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis.</p>
-                <a href="single.html"><span></span>READ MORE</a>
-              </div>
-            </div>
-            <div class="content-grid-info">
-              <img src="<?= base_url(); ?>assets/img/bg1.jpg" class="content-img" alt=""/>
+            <?php foreach($articles as $article): ?>
+
+              <div class="content-grid-info">
+                <img src="<?= base_url(); ?>assets/img/bg1.jpg" class="content-img" alt=""/>
                 <div class="post-info">
-                <h4><a href="single.html">Lorem ipsum dolor sit amet</a>  July 30, 2014 / 27 Comments</h4>
-                <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis.</p>
-                <a href="single.html"><span></span>READ MORE</a>
+                  <h4>
+                    <a href="single.html"><?= $article->name; ?></a>
+                    <?= date_definer($article->created_at); ?>
+                  </h4>
+                  <p><?= substr(strip_tags($article->content), 0, 120) . " ..."; ?></p>
+                  <a href="single.html"><span></span>BACA SELENGKAPNYA</a>
+                </div>
               </div>
-            </div>
-            <div class="content-grid-info">
-              <img src="<?= base_url(); ?>assets/img/bg1.jpg" class="content-img" alt=""/>
-                <div class="post-info">
-                <h4><a href="single.html">Lorem ipsum dolor sit amet</a>  July 30, 2014 / 27 Comments</h4>
-                <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis.</p>
-                <a href="single.html"><span></span>READ MORE</a>
-              </div>
-            </div>
+
+            <?php endforeach; ?>
           </div>
         </div>
         <div class="col-md-4 content-right">
