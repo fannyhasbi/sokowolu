@@ -7,7 +7,8 @@
           <?php foreach($articles as $article): ?>
 
             <div class="content-grid-info">
-              <img src="<?= base_url(); ?>assets/img/bg1.jpg" class="content-img" alt=""/>
+              <?php $img = article_image($article->content) ? article_image($article->content) : base_url('assets/img/bg1.jpg') ?>
+              <img src="<?= $img; ?>" class="content-img" alt=""/>
               <div class="post-info">
                 <h4>
                   <a href="<?= site_url('article/'.$article->slug); ?>"><?= $article->name; ?></a>

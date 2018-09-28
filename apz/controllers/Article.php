@@ -8,6 +8,7 @@ class Article extends CI_Controller {
   }
 
   public function index(){
+    $this->load->helper('article_helper');
     $data['articles'] = $this->article_model->getAll();
 
     $data['view_name'] = 'index';
