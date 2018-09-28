@@ -33,8 +33,26 @@ class Article_model extends CI_Model {
     return $q->result();
   }
 
+  public function getAll(){
+    $this->db->select('id, name, slug, created_at, views_count, content');
+    $this->db->from('article');
+    $this->db->order_by('created_at', 'DESC');
+    $q = $this->db->get();
+    
+    return $q->result();
+  }
+
   public function getBySlug($slug){
     $q = $this->db->get_where('article', ['slug' => $slug]);
+    return $q->row();
+  }
+
+  public function getLatest(){
+    $this->db->select('content, slug');
+    $this->db->order_by('created_at', 'DESC');
+    $this->db->limit(1);
+    $q = $this->db->get('article');
+    
     return $q->row();
   }
 

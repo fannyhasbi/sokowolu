@@ -264,8 +264,8 @@ Redesign from : W3layouts
           <span class="glyphicon glyphicon-leaf"></span>
         </div>
       </div>
-      <h4 class="wow fadeInUp animated" data-wow-delay=".7s">BLOG TERBARU</h4>
-      <p class="twit-text wow fadeInUp animated" data-wow-delay=".8s">Menurut Gubernur Jawa Tengah, Sokowolu adalah tempat wisata yang wajib dikunjungi bagi setiap wisatawan Semarang dan sekitarnya... <a href="#">Baca selengkapnya</a></p>
+      <h4 class="wow fadeInUp animated" data-wow-delay=".7s">ARTIKEL TERBARU</h4>
+      <p class="twit-text wow fadeInUp animated" data-wow-delay=".8s"><?= $latest_article; ?> <a href="<?= site_url('article/'.$article_slug); ?>">Baca selengkapnya</a></p>
     </div>
   </div>    
   <!--//blog-->  
