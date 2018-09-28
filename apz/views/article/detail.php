@@ -7,10 +7,9 @@
       </div>
         
       <ul class="comment-list">
-        <h5 class="post-author_head">Written by <a href="#" title="Posts by admin" rel="author">admin</a></h5>
         <li><img src="<?= base_url('assets/img/avatar.png'); ?>" class="img-responsive" alt="">
         <div class="desc">
-        <p>View all posts by: <a href="#" title="Posts by admin" rel="author">admin</a></p>
+          <p>Ditulis oleh: admin</p>
         </div>
         <div class="clearfix"></div>
         </li>
