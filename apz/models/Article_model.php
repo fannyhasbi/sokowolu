@@ -48,6 +48,7 @@ class Article_model extends CI_Model {
   }
 
   public function getLatest(){
+    $this->db->select('content, slug');
     $this->db->order_by('created_at', 'DESC');
     $this->db->limit(1);
     $q = $this->db->get('article');

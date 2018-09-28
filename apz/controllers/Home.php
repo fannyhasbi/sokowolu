@@ -8,7 +8,11 @@ class Home extends CI_Controller {
 
   public function index(){
     $this->load->model('article_model');
-    $data['latest_article'] = $this->article_model->getLatest()->content;
+
+    $article = $this->article_model->getLatest();
+
+    $data['article_slug']   = $article->slug;
+    $data['latest_article'] = $article->content;
     $data['latest_article'] = substr(strip_tags($data['latest_article']), 0, 120) . " ...";
 
     $this->load->view('home/index', $data);
