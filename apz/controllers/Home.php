@@ -2,8 +2,22 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
+  public function __construct(){
+    parent::__construct();
+
+    $this->visit_model->add();
+  }
+
   public function index(){
-    $this->load->view('home/index');
+    $this->load->model('article_model');
+
+    $article = $this->article_model->getLatest();
+
+    $data['article_slug']   = $article->slug;
+    $data['latest_article'] = $article->content;
+    $data['latest_article'] = substr(strip_tags($data['latest_article']), 0, 120) . " ...";
+
+    $this->load->view('home/index', $data);
   }
 
   public function login_editor(){

@@ -31,7 +31,7 @@
                   </td>
                   <td><?= $article->views_count; ?></td>
                   <td>
-                    <a href="<?= site_url(); ?>" rel="tooltip" title="Lihat" class="btn btn-info btn-link btn-sm" target="_blank">
+                    <a href="<?= site_url('article/'.$article->slug); ?>" rel="tooltip" title="Lihat" class="btn btn-info btn-link btn-sm" target="_blank">
                       <i class="material-icons">visibility</i>
                     </a>
                     <a href="<?= site_url('editor/article/'.$article->slug); ?>" rel="tooltip" title="Edit" class="btn btn-default btn-link btn-sm">
