@@ -923,6 +923,10 @@ font-size: 1.1em;
   text-transform: uppercase;
 }
 
+.content-img {
+  max-width: 670px;
+}
+
 @media(max-width:480px){
   .logo a h1 {
     color: #00aeff;
