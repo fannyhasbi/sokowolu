@@ -83,11 +83,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <img src="<?= base_url(); ?>assets/img/bg1.jpg" class="content-img" alt=""/>
                 <div class="post-info">
                   <h4>
-                    <a href="single.html"><?= $article->name; ?></a>
+                    <a href="<?= site_url('article/'.$article->slug); ?>"><?= $article->name; ?></a>
                     <?= date_definer($article->created_at); ?>
                   </h4>
                   <p><?= substr(strip_tags($article->content), 0, 120) . " ..."; ?></p>
-                  <a href="single.html"><span></span>BACA SELENGKAPNYA</a>
+                  <a href="<?= site_url('article/'.$article->slug); ?>"><span></span>BACA SELENGKAPNYA</a>
                 </div>
               </div>
 

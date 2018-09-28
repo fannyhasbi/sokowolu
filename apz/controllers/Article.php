@@ -12,4 +12,7 @@ class Article extends CI_Controller {
     $this->load->view('article/index', $data);
   }
 
+  public function detail(){
+    $this->load->view('article/detail');
+  }
 }
