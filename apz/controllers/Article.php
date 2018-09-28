@@ -21,6 +21,9 @@ class Article extends CI_Controller {
 
     $data['article'] = $this->article_model->getBySlug($slug);
 
+    // Increment view count
+    $this->article_model->updateViewCount($data['article']->id);
+
     $data['view_name'] = 'detail';
     $this->load->view('article/index_view', $data);
   }

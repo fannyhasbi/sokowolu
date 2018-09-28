@@ -83,6 +83,12 @@ class Article_model extends CI_Model {
     $this->db->update('article', $data);
   }
 
+  public function updateViewCount($article_id){
+    $this->db->where('id', $article_id);
+    $this->db->set('views_count', 'views_count + 1', FALSE);
+    $this->db->update('article');
+  }
+
   public function delete($id){
     $this->db->where('id', $id);
     $this->db->delete('article');

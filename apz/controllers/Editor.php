@@ -22,7 +22,8 @@ class Editor extends CI_Controller {
     $data['summary'] = [
       'article' => [
         'count' => $this->editor_model->getArticleSummary()->article_count,
-        'last' => $this->editor_model->getLastArticle()->created_at
+        'last' => $this->editor_model->getLastArticle()->created_at,
+        'views_count' => $this->editor_model->getArticleViewCount()->views
       ]
     ];
 
