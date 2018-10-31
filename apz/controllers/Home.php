@@ -62,4 +62,18 @@ class Home extends CI_Controller {
 
     redirect(site_url());
   }
+
+  public function send_message(){
+    if(!$this->input->post('kirim')){
+      show_404();
+      return;
+    }
+
+    $this->load->model('home_model');
+    $this->home_model->addMessage();
+
+    $this->session->set_flashdata('success-message', true);
+
+    redirect(site_url());
+  }
 }

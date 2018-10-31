@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+$route['send-message'] = 'home/send_message';
+
 // Article Page
 $route['article'] = 'article';
 $route['article/(:any)'] = 'article/detail/$1';
