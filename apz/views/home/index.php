@@ -163,25 +163,12 @@ Redesign from : W3layouts
               <img src="<?= base_url(); ?>assets/img/img1.jpg" class="img-responsive">
             </li>
             <li>
-              <h4>Rindhoni Ahmad</h4>
+              <h4>Ahmad Rindhoni</h4>
               <p class="rev-job">Mahasiswa Universitas Diponegoro</p>
             </li>
           </ul> 
           <div class="clearfix"></div>
           <p class="rev-desc">"Sangat bagus dan wajib hukumnya bagi setiap wisatawan yang berkunjung ke Salatiga"</p>
-        </div>
-        <div class="col-sm-12 col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".7s">
-          <ul> 
-            <li>
-              <img src="<?= base_url(); ?>assets/img/img1.jpg" class="img-responsive">
-            </li>
-            <li>
-              <h4>Yusuf Abdul Hakim</h4>
-              <p class="rev-job">Presiden Mahasiswa Universitas Diponegoro</p>
-            </li>
-          </ul> 
-          <div class="clearfix"> </div>
-          <p class="rev-desc">"Tempat wisata yang sangat mengagumkan untuk dikunjungi. Masyarakat sekitar sangat antusias akan para wisatawan Sokowolu ini.</p>
         </div>
         <div class="col-sm-12 col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".9s">
           <ul> 
@@ -190,11 +177,24 @@ Redesign from : W3layouts
             </li>
             <li>
               <h4>Aufal Marom</h4>
-              <p class="rev-job">Ketua Himpunan Mahasiswa Sistem Komputer Undip</p>
+              <p class="rev-job">Ketua Himpunan Mahasiswa Teknik Komputer UNDIP</p>
             </li>
           </ul> 
           <div class="clearfix"> </div>
           <p class="rev-desc">Tidak ada kata yang bisa diungkapkan selain "menakjubkan" untuk tempat wisata ini.</p>
+        </div>
+        <div class="col-sm-12 col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".7s">
+          <ul> 
+            <li>
+              <img src="<?= base_url(); ?>assets/img/img1.jpg" class="img-responsive">
+            </li>
+            <li>
+              <h4>Muhammad Rizki</h4>
+              <p class="rev-job">Wakil Ketua Himpunan Mahasiswa Teknik Komputer UNDIP</p>
+            </li>
+          </ul> 
+          <div class="clearfix"> </div>
+          <p class="rev-desc">"Tempat wisata yang sangat mengagumkan untuk dikunjungi. Masyarakat sekitar sangat antusias akan para wisatawan Sokowolu ini.</p>
         </div>
       </div>
     </div>
