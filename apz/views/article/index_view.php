@@ -14,6 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <link href="<?= base_url(); ?>assets/css/personal-blog.css" rel='stylesheet' type='text/css' />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="<?= base_url(); ?>assets/img/favico.ico" rel="icon">
   
   <?php if(isset($keywords)){ ?>
 
