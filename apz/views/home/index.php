@@ -24,6 +24,7 @@ Redesign from : W3layouts
 
   <!-- js -->
   <script src="<?= base_url(); ?>assets/js/jquery-1.11.1.min.js"></script> 
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   <!--web-fonts-->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
@@ -277,9 +278,9 @@ Redesign from : W3layouts
       <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">Kritik &amp; Saran</h3>
       <div class="contact-form">
         <p class="wow slideInDown animated" data-wow-delay=".2s">Silahkan kirim kritik dan saran bagi kalian yang sudah mengunjungi Sokowolu. Kirimkan juga pertanyaan kalian jika kalian berminat mengunjungi Sokowolu.</p>
-        <form>
+        <form action="<?= site_url('send-message'); ?>" method="post">
           <div class="col-md-6 form-left wow fadeInDown animated" data-wow-delay=".2s">
-            <input type="text" name="nama" placeholder="Nama" required>
+            <input type="text" name="name" placeholder="Nama" required>
           </div>
           
           <div class="col-md-6 form-right wow fadeInDown animated" data-wow-delay=".2s">
@@ -288,8 +289,8 @@ Redesign from : W3layouts
 
           <div class="clearfix"> </div>
           
-          <textarea class="wow fadeInDown animated" data-wow-delay=".9s" placeholder="Pesan" required></textarea>
-          
+          <textarea class="wow fadeInDown animated" name="message" data-wow-delay=".9s" placeholder="Pesan" required></textarea>
+
           <input type="submit" name="kirim" value="Kirim">
         </form>
       </div>
@@ -374,6 +375,13 @@ Redesign from : W3layouts
     });   
   </script>
   <!--script-->
+
+  <?php if($this->session->flashdata('success-message')){ ?>
+  <!-- SweetAlert -->
+  <script type="text/javascript">
+    swal("Terima kasih", "Kritik dan saran Anda cukup membantu untuk perkembangan desa kami :)", "success");
+  </script>
+  <?php } ?>
   <!--responsive slider-->
   <script src="<?= base_url(); ?>assets/js/responsiveslides.min.js"></script>
   <!--//responsive slider-->
