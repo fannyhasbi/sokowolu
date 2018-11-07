@@ -37,7 +37,7 @@ Redesign from : W3layouts
     <div class="top-nav">
       <div class="container">
         <div class="navbar-header logo">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigasi-collapse">
             <span class="sr-only">Ganti navigasi</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -46,7 +46,7 @@ Redesign from : W3layouts
           <h1 class="wow fadeInUp animated" data-wow-delay=".2s"><a href="index.html">Sokowolu</a></h1>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="navigasi-collapse">
           <ul class="nav navbar-right menu__list menu--shylock">
             <li class="menu__item menu__item--current"><a href="<?= site_url('article'); ?>" class="menu__link">Kabar Desa</a></li>
             <li class="menu__item"><a href="#about" class="menu__link scroll">Tentang</a></li>
@@ -257,20 +257,6 @@ Redesign from : W3layouts
     </div>
   </div>
   <!--//portfolio-->
-
-  <!--blog-->  
-  <div class="blog">
-    <div class="container">
-      <div class="wow zoomIn animated" data-wow-delay=".2s">
-        <div class="newest-blog">
-          <span class="glyphicon glyphicon-leaf"></span>
-        </div>
-      </div>
-      <h4 class="wow fadeInUp animated" data-wow-delay=".7s">ARTIKEL TERBARU</h4>
-      <p class="twit-text wow fadeInUp animated" data-wow-delay=".8s"><?= $latest_article; ?> <a href="<?= site_url('article/'.$article_slug); ?>">Baca selengkapnya</a></p>
-    </div>
-  </div>    
-  <!--//blog-->  
 
   <!--contact -->
   <div class="contact" id="contact">
