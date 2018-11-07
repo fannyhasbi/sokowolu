@@ -48,7 +48,7 @@ Redesign from : W3layouts
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-right menu__list menu--shylock">
-            <li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
+            <li class="menu__item menu__item--current"><a href="<?= site_url('article'); ?>" class="menu__link">Kabar Desa</a></li>
             <li class="menu__item"><a href="#about" class="menu__link scroll">Tentang</a></li>
             <li class="menu__item"><a href="#services" class="menu__link scroll">Tanggapan</a></li>
             <li class="menu__item"><a href="#portfolio" class="menu__link scroll">Foto</a></li>
