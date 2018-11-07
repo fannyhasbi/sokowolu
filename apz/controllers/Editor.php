@@ -122,6 +122,7 @@ class Editor extends CI_Controller {
     $this->load->model('gallery_model');
 
     $data['view_name'] = 'gallery';
+    $data['gallery']   = $this->gallery_model->getGallery();
 
     $this->load->view('editor/index_view', $data);
   }
