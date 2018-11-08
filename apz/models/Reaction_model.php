@@ -12,17 +12,23 @@ class Reaction_model extends CI_Model {
     return $this->db->get_where('reaction', ['photo' => $alamat]);
   }
 
-  public function getReaction(){
+  public function get(){
+    $q = $this->db->get('reaction');
+
+    return $q->result();
+  }
+
+  public function getById($id){
+    $q = $this->db->get_where('reaction', ['id' => $id]);
+
+    return $q->row();
+  }
+
+  public function getForHome(){
     $this->db->limit(3);
     $q = $this->db->get('reaction');
 
     return $q->result();
-  } 
-
-  public function getReactionById($id){
-    $q = $this->db->get_where('reaction', ['id' => $id]);
-
-    return $q->row();
   }
 
   public function updateReaction($id, $alamat_foto = NULL){

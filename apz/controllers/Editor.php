@@ -187,7 +187,7 @@ class Editor extends CI_Controller {
   public function reaction(){
     $this->load->model('reaction_model');
     $data['view_name'] = 'reaction';
-    $data['reactions'] = $this->reaction_model->getReaction();
+    $data['reactions'] = $this->reaction_model->get();
 
     $this->load->view('editor/index_view', $data);
   }
@@ -239,7 +239,7 @@ class Editor extends CI_Controller {
     }
     else {
       $data['view_name'] = 'edit_reaction';
-      $data['reaction'] = $this->reaction_model->getReactionById($id);
+      $data['reaction'] = $this->reaction_model->getById($id);
 
       $this->load->view('editor/index_view', $data);
     }

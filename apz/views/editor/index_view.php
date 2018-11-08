@@ -50,7 +50,7 @@
           <li class="nav-item <?= uri_string() == 'editor/gallery' ? 'active' : '' ?>">
             <a class="nav-link" href="<?= site_url('editor/gallery'); ?>">
               <i class="material-icons">photo</i>
-              <p>Gallery</p>
+              <p>Galeri</p>
             </a>
           </li>
           <li class="nav-item <?= uri_string() == 'editor/reaction' ? 'active' : '' ?>">
