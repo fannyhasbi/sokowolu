@@ -183,7 +183,25 @@ class Editor extends CI_Controller {
   }
 
   public function edit_reaction($id){
-    // todo
+    $this->load->model('reaction_model');
+
+    $cek = $this->reaction_model->check($id);
+    if($cek->num_rows() == 0){
+      notify('Tanggapan tidak ditemukan', 'warning', 'editor/reaction');
+      return;
+    }
+
+    if($this->input->post('save-reaction')){
+      $this->reaction_model->updateReaction($id);
+
+      notify('Perubahan berhasil disimpan', 'success', 'editor/reaction');
+    }
+    else {
+      $data['view_name'] = 'edit_reaction';
+      $data['reaction'] = $this->reaction_model->getReactionById($id);
+
+      $this->load->view('editor/index_view', $data);
+    }
   }
 
 }
