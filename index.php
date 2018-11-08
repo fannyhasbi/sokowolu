@@ -1,7 +1,18 @@
 <?php
 /**
- * CodeIgniter
+ * Sokowolu
  *
+ * Author: Fanny Hasbi
+ * Website: https://fannyhasbi.github.io
+ * Organization: Computer Engineering Research Club Universitas Diponegoro
+ * Github: https://github.com/fannyhasbi
+ * Linkedin: https://linkedin.com/in/fannyhasbi 
+ */
+
+
+/**
+ * CodeIgniter
+ * 
  * An open source application development framework for PHP
  *
  * This content is released under the MIT License (MIT)
