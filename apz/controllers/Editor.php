@@ -9,6 +9,26 @@ class Editor extends CI_Controller {
     $this->load->model('editor_model');
   }
 
+  private function generateAlamatGallery(){
+    $alamat = "sokowolu_";
+    $n = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    for($i=0;$i<30;$i++){
+      $alamat .= $n[rand(0, strlen($n) - 1)];
+    }
+
+    return $alamat;
+  }
+
+  private function generateAlamatReaction(){
+    $alamat = "skwl_";
+    $n = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    for($i=0;$i<10;$i++){
+      $alamat .= $n[rand(0, strlen($n) - 1)];
+    }
+
+    return $alamat;
+  }
+
   public function index(){
     $this->dashboard();
   }
@@ -115,6 +135,131 @@ class Editor extends CI_Controller {
     }
     else {
       notify('Artikel tidak ditemukan', 'error', 'editor/article');
+    }
+  }
+
+  public function gallery(){
+    $this->load->model('gallery_model');
+
+    $data['view_name'] = 'gallery';
+    $data['gallery']   = $this->gallery_model->getGallery();
+
+    $this->load->view('editor/index_view', $data);
+  }
+
+  public function add_gallery(){
+    if($this->input->post('add-gallery')){
+      $alamat = $this->generateAlamatGallery();
+
+      $this->load->model('gallery_model');
+
+      // cek apakah ada src yang sama
+      $cek = $this->gallery_model->checkSrc($alamat)->num_rows();
+      while($cek > 0){
+        $alamat = $this->generateAlamatGallery();
+        $cek = $this->gallery_model->checkSrc($alamat)->num_rows();
+      }
+
+      $config['upload_path']   = './uploads/gallery/';
+      $config['file_name']     = $alamat;
+      $config['allowed_types'] = 'jpg|png|svg';
+      $config['max_size']      = 600;
+
+      $this->load->library('upload', $config);
+
+      if ( ! $this->upload->do_upload('foto')){
+        notify($this->upload->display_errors('', ''), 'error', 'editor/gallery');
+      }
+      else {
+        $data = $this->upload->data();
+
+        $this->gallery_model->addGallery($data['file_name']);
+
+        notify('Berhasil menambahkan foto ke galeri', 'success', 'editor/gallery');
+      }
+    }
+    else {
+      $data['view_name'] = 'add_gallery';
+      $this->load->view('editor/index_view', $data);
+    }
+  }
+
+  public function reaction(){
+    $this->load->model('reaction_model');
+    $data['view_name'] = 'reaction';
+    $data['reactions'] = $this->reaction_model->get();
+
+    $this->load->view('editor/index_view', $data);
+  }
+
+  public function edit_reaction($id){
+    $this->load->model('reaction_model');
+
+    $cek = $this->reaction_model->check($id);
+    if($cek->num_rows() == 0){
+      notify('Tanggapan tidak ditemukan', 'warning', 'editor/reaction');
+      return;
+    }
+
+    if($this->input->post('save-reaction')){
+      // cek apakah ada foto yang diupload
+      if(!empty($_FILES['foto']['name'])){
+        $alamat = $this->generateAlamatReaction();
+
+        // cek apakah ada src yang sama
+        $cek = $this->reaction_model->checkPhoto($alamat)->num_rows();
+        while($cek > 0){
+          $alamat = $this->generateAlamatReaction();
+          $cek = $this->reaction_model->checkPhoto($alamat)->num_rows();
+        }
+
+        $config['upload_path']   = './uploads/reaction/';
+        $config['file_name']     = $alamat;
+        $config['allowed_types'] = 'jpg|png|svg';
+        $config['max_size']      = 600;
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload('foto')){
+          notify($this->upload->display_errors('', ''), 'error', 'editor/reaction');
+        }
+        else {
+          $data = $this->upload->data();
+
+          $this->reaction_model->updateReaction($id, $data['file_name']);
+
+          notify('Perubahan berhasil disimpan', 'success', 'editor/reaction');
+        }
+      }
+      else {
+        $this->reaction_model->updateReaction($id, NULL);
+
+        notify('Perubahan berhasil disimpan', 'success', 'editor/reaction');
+      }
+    }
+    else {
+      $data['view_name'] = 'edit_reaction';
+      $data['reaction'] = $this->reaction_model->getById($id);
+
+      $this->load->view('editor/index_view', $data);
+    }
+  }
+
+  public function action_reaction(){
+    if($this->input->get('action') && $this->input->get('id')){
+      $this->load->model('reaction_model');
+
+      $id     = (int) purify($this->input->get('id'));
+      $action = purify($this->input->get('action'));
+
+      // var_dump($id); die();
+
+      $this->reaction_model->updateHideStatus($id, $action);
+
+      notify('Status berhasil diubah', 'success', 'editor/reaction');
+    }
+    else {
+      redirect(site_url('editor/reaction'));
     }
   }
 
