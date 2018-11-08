@@ -17,8 +17,8 @@
 
           <div class="row">
             <div class="col-md-12">
-                <label class="control-label">Foto</label>
-                <input type="file" class="form-control" name="foto" style="opacity: 1; position: inherit;">
+              <label class="control-label">Foto</label>
+              <input type="file" class="form-control" name="foto" style="opacity: 1; position: inherit;">
             </div>
           </div>
 

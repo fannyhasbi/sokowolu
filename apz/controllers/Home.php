@@ -10,8 +10,10 @@ class Home extends CI_Controller {
 
   public function index(){
     $this->load->model('gallery_model');
+    $this->load->model('reaction_model');
 
     $data['gallery'] = $this->gallery_model->getForHome();
+    $data['reactions'] = $this->reaction_model->getForHome();
 
     $this->load->view('home/index', $data);
   }
