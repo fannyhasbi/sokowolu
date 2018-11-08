@@ -174,4 +174,10 @@ class Editor extends CI_Controller {
     }
   }
 
+  public function reaction(){
+    $data['view_name'] = 'reaction';
+
+    $this->load->view('editor/index_view', $data);
+  }
+
 }

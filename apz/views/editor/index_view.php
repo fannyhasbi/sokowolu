@@ -53,6 +53,12 @@
               <p>Gallery</p>
             </a>
           </li>
+          <li class="nav-item <?= uri_string() == 'editor/reaction' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?= site_url('editor/reaction'); ?>">
+              <i class="material-icons">mood</i>
+              <p>Tanggapan</p>
+            </a>
+          </li>
           <li class="nav-item <?= uri_string() == 'editor/profile' ? 'active' : '' ?>">
             <a class="nav-link" href="<?= site_url('editor/profile'); ?>">
               <i class="material-icons">person</i>
