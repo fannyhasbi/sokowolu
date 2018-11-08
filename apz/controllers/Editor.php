@@ -9,6 +9,16 @@ class Editor extends CI_Controller {
     $this->load->model('editor_model');
   }
 
+  private function generateAlamatGallery(){
+    $alamat = "sokowolu_";
+    $n = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    for($i=0;$i<30;$i++){
+      $alamat .= $n[rand(0, strlen($n) - 1)];
+    }
+
+    return $alamat;
+  }
+
   public function index(){
     $this->dashboard();
   }
@@ -125,6 +135,43 @@ class Editor extends CI_Controller {
     $data['gallery']   = $this->gallery_model->getGallery();
 
     $this->load->view('editor/index_view', $data);
+  }
+
+  public function add_gallery(){
+    if($this->input->post('add-gallery')){
+      $alamat = $this->generateAlamatGallery();
+
+      $this->load->model('gallery_model');
+
+      // cek apakah ada src yang sama
+      $cek = $this->gallery_model->checkSrc($alamat)->num_rows();
+      while($cek > 0){
+        $alamat = $this->generateAlamatGallery();
+        $cek = $this->gallery_model->checkSrc($alamat)->num_rows();
+      }
+
+      $config['upload_path']   = './uploads/gallery/';
+      $config['file_name']     = $alamat;
+      $config['allowed_types'] = 'jpg|png|svg';
+      $config['max_size']      = 1000;
+
+      $this->load->library('upload', $config);
+
+      if ( ! $this->upload->do_upload('foto')){
+        notify($this->upload->display_errors('', ''), 'error', 'editor/gallery');
+      }
+      else {
+        $data = $this->upload->data();
+
+        $this->gallery_model->addGallery($data['file_name']);
+
+        notify('Berhasil menambahkan foto ke galeri', 'success', 'editor/gallery');
+      }
+    }
+    else {
+      $data['view_name'] = 'add_gallery';
+      $this->load->view('editor/index_view', $data);
+    }
   }
 
 }
