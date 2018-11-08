@@ -209,49 +209,30 @@ Redesign from : W3layouts
       <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">Foto Wisata</h3>
       <div class="sap_tabs">
         <div class="row">
-          <div class="col-md-4">
-            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/img1.jpg);" href="#">
-              <div class="details">
-                <h4>Top Vacations</h4>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/img1.jpg);" href="#">
-              <div class="details">
-                <h4>Top Vacations</h4>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/img1.jpg);" href="#">
-              <div class="details">
-                <h4>Top Vacations</h4>
-              </div>
-            </a>
+          <?php
+          if(count($gallery) > 0){
+            foreach($gallery as $item):
+          ?>
+            <div class="col-md-4">
+              <a class="product-item" style="background-image: url(<?= base_url('uploads/gallery/'.$item->src); ?>);" href="#">
+                <div class="details">
+                  <h4><?= $item->judul; ?></h4>
+                </div>
+              </a>
+            </div>
+          <?php
+            endforeach;
+          }
+          else {
+          ?>
+          
+          <div class="text-center">
+            <p>Belum ada foto wisata</p>
           </div>
 
-          <div class="col-md-4">
-            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/img1.jpg);" href="#">
-              <div class="details">
-                <h4>Top Vacations</h4>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/img1.jpg);" href="#">
-              <div class="details">
-                <h4>Top Vacations</h4>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a class="product-item" style="background-image: url(<?= base_url(); ?>assets/img/img1.jpg);" href="#">
-              <div class="details">
-                <h4>Top Vacations</h4>
-              </div>
-            </a>
-          </div>
+          <?php
+          }
+          ?>
         </div>
       </div>
     </div>

@@ -9,13 +9,9 @@ class Home extends CI_Controller {
   }
 
   public function index(){
-    $this->load->model('article_model');
+    $this->load->model('gallery_model');
 
-    $article = $this->article_model->getLatest();
-
-    $data['article_slug']   = $article->slug;
-    $data['latest_article'] = $article->content;
-    $data['latest_article'] = substr(strip_tags($data['latest_article']), 0, 120) . " ...";
+    $data['gallery'] = $this->gallery_model->getForHome();
 
     $this->load->view('home/index', $data);
   }

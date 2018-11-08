@@ -9,7 +9,7 @@ function notify($message, $type = '', $redirect_to = null){
   // Change to empty string when the sent type isn't in the accepted_type array
   if($type != ''){
     if(!in_array($type, $accepted_type))
-      $type = '';
+      $type = 'info';
   }
 
   $ci->session->set_flashdata('msg', $message);
@@ -48,4 +48,13 @@ function date_definer($tanggal){
   $tanggal[2] = explode(" ", $tanggal[2])[0];
   $tanggal = array_reverse($tanggal);
   return implode(" ", $tanggal);
+}
+
+// purify inputs
+function purify($r){
+  $r = htmlspecialchars($r);
+  $r = stripslashes($r);
+  $r = trim($r);
+
+  return $r;
 }
