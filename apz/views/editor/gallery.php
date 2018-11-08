@@ -24,8 +24,8 @@
                 <td><?= $no; ?></td>
                 <td><?= $item->judul; ?></td>
                 <td>
-                  <a href="<?= base_url('uploads/gallery/'.$item->src); ?>" target="_blank" rel="tooltip" title="Lihat foto" class="btn-xs">
-                    <i class="material-icons">remove_red_eyes</i>
+                  <a href="<?= base_url('uploads/gallery/'.$item->src); ?>" rel="tooltip" title="Lihat foto" class="btn btn-info btn-link btn-sm" target="_blank">
+                    <i class="material-icons">visibility</i>
                   </a>
                 </td>
               </tr>

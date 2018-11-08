@@ -7,13 +7,15 @@ class Gallery_model extends CI_Model {
   }
 
   public function getForHome(){
-    $this->db->limit(3);
+    $this->db->limit(6);
+    $this->db->order_by('id', 'DESC');
     $q = $this->db->get('gallery');
 
     return $q->result();
   }
 
   public function getGallery(){
+    $this->db->order_by('id', 'DESC');
     $q = $this->db->get('gallery');
 
     return $q->result();
