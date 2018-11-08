@@ -41,4 +41,20 @@ class Reaction_model extends CI_Model {
     $this->db->update('reaction', $data);
   }
 
+  public function updateHideStatus($id, $action){
+    $this->db->where('id', $id);
+
+    if($action == 'show'){
+      $data['is_hidden'] = 0;
+    }
+    else if($action == 'hide'){
+      $data['is_hidden'] = 1;
+    }
+    else {
+      return;
+    }
+
+    $this->db->update('reaction', $data);
+  }
+
 }

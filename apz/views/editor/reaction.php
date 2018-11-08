@@ -25,12 +25,16 @@
                     <a href="<?= site_url('editor/reaction/'.$reaction->id); ?>" rel="tooltip" title="Edit tanggapan" class="btn btn-default btn-link btn-sm">
                       <i class="material-icons">edit</i>
                     </a>
-                    <button rel="tooltip" title="Sembunyikan" class="btn btn-danger btn-link btn-sm">
-                      <i class="material-icons">cancel</i>
-                    </button>
-                    <!-- <button rel="tooltip" title="Tampilkan" class="btn btn-success btn-link btn-sm">
-                      <i class="material-icons">check</i>
-                    </button> -->
+
+                    <?php if($reaction->is_hidden) { ?>
+                      <a href="<?= site_url('editor/action-reaction?action=show&id='.$reaction->id); ?>" rel="tooltip" title="Tampilkan" class="btn btn-success btn-link btn-sm">
+                        <i class="material-icons">check</i>
+                      </a>
+                    <?php } else { ?>
+                      <a href="<?= site_url('editor/action-reaction?action=hide&id='.$reaction->id); ?>" rel="tooltip" title="Sembunyikan" class="btn btn-danger btn-link btn-sm">
+                        <i class="material-icons">cancel</i>
+                      </a>
+                    <?php } ?>
                   </td>
                 </tr>
               <?php $no++; endforeach; ?>

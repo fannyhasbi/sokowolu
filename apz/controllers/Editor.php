@@ -245,4 +245,22 @@ class Editor extends CI_Controller {
     }
   }
 
+  public function action_reaction(){
+    if($this->input->get('action') && $this->input->get('id')){
+      $this->load->model('reaction_model');
+
+      $id     = (int) purify($this->input->get('id'));
+      $action = purify($this->input->get('action'));
+
+      // var_dump($id); die();
+
+      $this->reaction_model->updateHideStatus($id, $action);
+
+      notify('Status berhasil diubah', 'success', 'editor/reaction');
+    }
+    else {
+      redirect(site_url('editor/reaction'));
+    }
+  }
+
 }

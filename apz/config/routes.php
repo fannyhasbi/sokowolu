@@ -26,6 +26,7 @@ $route['editor/add-gallery'] = 'editor/add_gallery';
 // Reaction for homepage Editor
 $route['editor/reaction'] = 'editor/reaction';
 $route['editor/reaction/(:num)'] = 'editor/edit_reaction/$1';
+$route['editor/action-reaction'] = 'editor/action_reaction';
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
