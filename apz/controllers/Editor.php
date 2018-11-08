@@ -19,6 +19,16 @@ class Editor extends CI_Controller {
     return $alamat;
   }
 
+  private function generateAlamatReaction(){
+    $alamat = "skwl_";
+    $n = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    for($i=0;$i<10;$i++){
+      $alamat .= $n[rand(0, strlen($n) - 1)];
+    }
+
+    return $alamat;
+  }
+
   public function index(){
     $this->dashboard();
   }
@@ -153,7 +163,7 @@ class Editor extends CI_Controller {
       $config['upload_path']   = './uploads/gallery/';
       $config['file_name']     = $alamat;
       $config['allowed_types'] = 'jpg|png|svg';
-      $config['max_size']      = 1000;
+      $config['max_size']      = 600;
 
       $this->load->library('upload', $config);
 
@@ -192,9 +202,40 @@ class Editor extends CI_Controller {
     }
 
     if($this->input->post('save-reaction')){
-      $this->reaction_model->updateReaction($id);
+      // cek apakah ada foto yang diupload
+      if(!empty($_FILES['foto']['name'])){
+        $alamat = $this->generateAlamatReaction();
 
-      notify('Perubahan berhasil disimpan', 'success', 'editor/reaction');
+        // cek apakah ada src yang sama
+        $cek = $this->reaction_model->checkPhoto($alamat)->num_rows();
+        while($cek > 0){
+          $alamat = $this->generateAlamatReaction();
+          $cek = $this->reaction_model->checkPhoto($alamat)->num_rows();
+        }
+
+        $config['upload_path']   = './uploads/reaction/';
+        $config['file_name']     = $alamat;
+        $config['allowed_types'] = 'jpg|png|svg';
+        $config['max_size']      = 600;
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload('foto')){
+          notify($this->upload->display_errors('', ''), 'error', 'editor/reaction');
+        }
+        else {
+          $data = $this->upload->data();
+
+          $this->reaction_model->updateReaction($id, $data['file_name']);
+
+          notify('Perubahan berhasil disimpan', 'success', 'editor/reaction');
+        }
+      }
+      else {
+        $this->reaction_model->updateReaction($id, NULL);
+
+        notify('Perubahan berhasil disimpan', 'success', 'editor/reaction');
+      }
     }
     else {
       $data['view_name'] = 'edit_reaction';
