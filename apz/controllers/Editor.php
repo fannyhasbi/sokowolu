@@ -175,9 +175,15 @@ class Editor extends CI_Controller {
   }
 
   public function reaction(){
+    $this->load->model('reaction_model');
     $data['view_name'] = 'reaction';
+    $data['reactions'] = $this->reaction_model->getReaction();
 
     $this->load->view('editor/index_view', $data);
+  }
+
+  public function edit_reaction($id){
+    // todo
   }
 
 }

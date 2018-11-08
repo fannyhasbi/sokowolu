@@ -15,23 +15,25 @@
               <th></th>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Aufal Marom</td>
-                <td>Ketua Himpunan Mahasiswa Teknik Komputer UNDIP</td>
-                <td>Tidak ada kata yang bisa diungkapkan selain...</td>
-                <td>
-                  <a href="#" rel="tooltip" title="Edit tanggapan" class="btn btn-default btn-link btn-sm">
-                    <i class="material-icons">edit</i>
-                  </a>
-                  <button rel="tooltip" title="Sembunyikan" class="btn btn-danger btn-link btn-sm">
-                    <i class="material-icons">cancel</i>
-                  </button>
-                  <!-- <button rel="tooltip" title="Tampilkan" class="btn btn-success btn-link btn-sm">
-                    <i class="material-icons">check</i>
-                  </button> -->
-                </td>
-              </tr>
+              <?php $no = 1; foreach($reactions as $reaction): ?>
+                <tr>
+                  <td><?= $no; ?></td>
+                  <td><?= $reaction->name; ?></td>
+                  <td><?= $reaction->role; ?></td>
+                  <td><?= $reaction->reaction; ?></td>
+                  <td>
+                    <a href="<?= site_url('editor/reaction/'.$reaction->id); ?>" rel="tooltip" title="Edit tanggapan" class="btn btn-default btn-link btn-sm">
+                      <i class="material-icons">edit</i>
+                    </a>
+                    <button rel="tooltip" title="Sembunyikan" class="btn btn-danger btn-link btn-sm">
+                      <i class="material-icons">cancel</i>
+                    </button>
+                    <!-- <button rel="tooltip" title="Tampilkan" class="btn btn-success btn-link btn-sm">
+                      <i class="material-icons">check</i>
+                    </button> -->
+                  </td>
+                </tr>
+              <?php $no++; endforeach; ?>
             </tbody>
           </table>
         </div>
