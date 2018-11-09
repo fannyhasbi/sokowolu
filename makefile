@@ -1,7 +1,7 @@
 arsip:
 	make htaccess-production
 	rm production.zip
-	zip -rq production.zip ./ -x uploads/gallery/* uploads/reaction/* *.git* .htaccess.bak *.md composer.lock sokowolu.sql makefile
+	zip -rq production.zip ./ -x uploads/ *.git* .htaccess.bak *.md composer.lock sokowolu.sql makefile
 	make htaccess-revert
 	echo "\n---- COMPRESSING SUCCESS ----\n"
 
