@@ -270,8 +270,24 @@ class Editor extends CI_Controller {
   }
 
   public function see_message($id){
-    $data['view_name'] = 'see_message';
-    $this->load->view('editor/index_view', $data);
+    $this->load->model('message_model');
+
+    $id = purify($id);
+
+    $cek = $this->message_model->check($id);
+
+    if($cek->num_rows() > 0){
+      $data['view_name'] = 'see_message';
+      $data['message'] = $cek->row();
+
+      // set menjadi sudah dibaca
+      $this->message_model->setRead($id);
+
+      $this->load->view('editor/index_view', $data);
+    }
+    else {
+      notify('Pesan tidak ditemukan', 'warning', 'editor/message');
+    }
   }
 
 }

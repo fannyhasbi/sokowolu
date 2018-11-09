@@ -9,15 +9,15 @@
           <table class="table table-responsive">
             <tr>
               <th>Nama</th>
-              <td>Fanny Hasbi</td>
+              <td><?= $message->name; ?></td>
             </tr>
             <tr>
               <th>Tanggal</th>
-              <td>1 Juli 2018</td>
+              <td><?= date_definer($message->created_at); ?></td>
             </tr>
             <tr>
               <th>Pesan</th>
-              <td>Halo, perkenalkan nama saya Fanny Hasbi. Saya kuliah di Universitas Diponegoro, Semarang</td>
+              <td><?= $message->message; ?></td>
             </tr>
           </table>
         </div>
