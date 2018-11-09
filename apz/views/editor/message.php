@@ -16,7 +16,7 @@
             </thead>
             <tbody>
               <?php $no = 1; foreach($messages as $message): ?>
-                <tr>
+                <tr style="<?= $message->is_read == 1 ? 'color: #fff; background-color: #999;' : '' ?>">
                   <td><?= $no; ?></td>
                   <td><?= $message->name; ?></td>
                   <td><?= strlen($message->message) > 50 ? substr($message->message, 0, 50) . '...' : $message->message; ?></td>
