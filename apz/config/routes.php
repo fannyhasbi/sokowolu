@@ -28,6 +28,9 @@ $route['editor/reaction'] = 'editor/reaction';
 $route['editor/reaction/(:num)'] = 'editor/edit_reaction/$1';
 $route['editor/action-reaction'] = 'editor/action_reaction';
 
+// Message Editor
+$route['editor/message'] = 'editor/message';
+
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

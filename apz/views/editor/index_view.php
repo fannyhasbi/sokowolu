@@ -59,6 +59,12 @@
               <p>Tanggapan</p>
             </a>
           </li>
+          <li class="nav-item <?= uri_string() == 'editor/message' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?= site_url('editor/message'); ?>">
+              <i class="material-icons">mail</i>
+              <p>Pesan</p>
+            </a>
+          </li>
           <li class="nav-item <?= uri_string() == 'editor/profile' ? 'active' : '' ?>">
             <a class="nav-link" href="<?= site_url('editor/profile'); ?>">
               <i class="material-icons">person</i>
