@@ -252,8 +252,6 @@ class Editor extends CI_Controller {
       $id     = (int) purify($this->input->get('id'));
       $action = purify($this->input->get('action'));
 
-      // var_dump($id); die();
-
       $this->reaction_model->updateHideStatus($id, $action);
 
       notify('Status berhasil diubah', 'success', 'editor/reaction');
