@@ -1,8 +1,10 @@
 # folder
 uploads/
+vendor/
 
 # files
 .env
+composer.lock
 production.zip
 sokowolu.sql
 
