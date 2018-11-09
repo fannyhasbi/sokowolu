@@ -252,14 +252,41 @@ class Editor extends CI_Controller {
       $id     = (int) purify($this->input->get('id'));
       $action = purify($this->input->get('action'));
 
-      // var_dump($id); die();
-
       $this->reaction_model->updateHideStatus($id, $action);
 
       notify('Status berhasil diubah', 'success', 'editor/reaction');
     }
     else {
       redirect(site_url('editor/reaction'));
+    }
+  }
+
+  public function message(){
+    $this->load->model('message_model');
+    $data['view_name'] = 'message';
+    $data['messages'] = $this->message_model->get();
+
+    $this->load->view('editor/index_view', $data);
+  }
+
+  public function see_message($id){
+    $this->load->model('message_model');
+
+    $id = purify($id);
+
+    $cek = $this->message_model->check($id);
+
+    if($cek->num_rows() > 0){
+      $data['view_name'] = 'see_message';
+      $data['message'] = $cek->row();
+
+      // set menjadi sudah dibaca
+      $this->message_model->setRead($id);
+
+      $this->load->view('editor/index_view', $data);
+    }
+    else {
+      notify('Pesan tidak ditemukan', 'warning', 'editor/message');
     }
   }
 
