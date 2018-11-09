@@ -14,6 +14,7 @@ class Home extends CI_Controller {
     $this->load->model('gallery_model');
 
     $data['summary']   = $this->editor_model->getSummary();
+    $data['highlight'] = $this->gallery_model->getHighlight();
     $data['reactions'] = $this->reaction_model->getForHome();
     $data['gallery']   = $this->gallery_model->getForHome();
 
