@@ -4,3 +4,6 @@ uploads/
 # files
 production.zip
 sokowolu.sql
+
+# production
+.htaccess-production
