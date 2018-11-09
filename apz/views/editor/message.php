@@ -15,12 +15,14 @@
               <th></th>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Fanny Hasbi</td>
-                <td>Halo, perkenalkan nama saya Fanny Hasbi...</td>
-                <td>1 November 2018</td>
-              </tr>
+              <?php $no = 1; foreach($messages as $message): ?>
+                <tr>
+                  <td><?= $no; ?></td>
+                  <td><?= $message->name; ?></td>
+                  <td><?= strlen($message->message) > 50 ? substr($message->message, 0, 50) . '...' : $message->message; ?></td>
+                  <td><?= date_definer($message->created_at); ?></td>
+                </tr>
+              <?php $no++; endforeach; ?>
             </tbody>
           </table>
         </div>

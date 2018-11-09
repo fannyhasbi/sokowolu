@@ -264,9 +264,9 @@ class Editor extends CI_Controller {
   }
 
   public function message(){
-    // $this->load->model('message_model');
+    $this->load->model('message_model');
     $data['view_name'] = 'message';
-    // $data['messages'] = $this->reaction_model->get();
+    $data['messages'] = $this->message_model->get();
 
     $this->load->view('editor/index_view', $data);
   }
