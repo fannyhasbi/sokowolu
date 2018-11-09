@@ -3,6 +3,7 @@
 <head>
   <title>Editor Login</title>
   <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/bootstrap.css'); ?>">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <div class="jumbotron text-center alert-success">
@@ -22,6 +23,10 @@
       <div class="form-group">
         <label class="control-label">Password</label>
         <input type="password" name="password" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <div class="g-recaptcha" name="recaptcha" data-sitekey="6Le1qHkUAAAAAP2wkEzSvYjBxcK4picBKowqlj1m"></div>
       </div>
 
       <div class="form-group">

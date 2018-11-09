@@ -7,7 +7,7 @@ class Gallery_model extends CI_Model {
   }
 
   public function getForHome(){
-    $this->db->limit(6);
+    $this->db->limit(9);
     $this->db->order_by('id', 'DESC');
     $q = $this->db->get('gallery');
 
@@ -28,5 +28,11 @@ class Gallery_model extends CI_Model {
     );
 
     $this->db->insert('gallery', $data);
+  }
+
+  public function delete($id){
+    $this->db->where('id', $id);
+
+    $this->db->delete('gallery');
   }
 }

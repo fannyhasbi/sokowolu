@@ -22,11 +22,16 @@ $route['editor/delete-article/(:num)'] = 'editor/delete_article/$1';
 // Gallery Editor
 $route['editor/gallery'] = 'editor/gallery';
 $route['editor/add-gallery'] = 'editor/add_gallery';
+$route['editor/delete-gallery/(:num)'] = 'editor/delete_gallery/$1';
 
 // Reaction for homepage Editor
 $route['editor/reaction'] = 'editor/reaction';
 $route['editor/reaction/(:num)'] = 'editor/edit_reaction/$1';
 $route['editor/action-reaction'] = 'editor/action_reaction';
+
+// Message Editor
+$route['editor/message'] = 'editor/message';
+$route['editor/message/(:num)'] = 'editor/see_message/$1';
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';

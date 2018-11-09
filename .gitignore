@@ -2,5 +2,9 @@
 uploads/
 
 # files
+.env
 production.zip
 sokowolu.sql
+
+# production
+.htaccess-production

@@ -27,6 +27,9 @@
                   <a href="<?= base_url('uploads/gallery/'.$item->src); ?>" rel="tooltip" title="Lihat foto" class="btn btn-info btn-link btn-sm" target="_blank">
                     <i class="material-icons">visibility</i>
                   </a>
+                  <button onclick="delete_photo(<?= $item->id; ?>, '<?= $item->judul ;?>')" rel="tooltip" title="Hapus foto" class="btn btn-danger btn-link btn-sm">
+                    <i class="material-icons">close</i>
+                  </button>
                 </td>
               </tr>
               <?php $no++; endforeach; ?>
@@ -37,3 +40,25 @@
     </div>
   </div>
 </div>
+
+<script>
+function delete_photo(id, name){
+  swal({
+    text: 'Yakin ingin menghapus foto '+ name +'?',
+    icon: 'warning',
+    dangerMode: true,
+    buttons: {
+      cancel: 'Tidak',
+      confirm: {
+        text: 'Hapus',
+        value: 'delete'
+      }
+    }
+  })
+  .then((value) => {
+    if(value == 'delete'){
+      window.location = "<?= site_url('editor/delete-gallery/'); ?>"+ id;
+    }
+  });
+}
+</script>

@@ -41,11 +41,12 @@ class Editor extends CI_Controller {
   private function dashboard(){
     $data['summary'] = [
       'general' => [
-        'visit' => $this->visit_model->getSum()->visit_count
+        'visit'      => $this->visit_model->getSum()->visit_count,
+        'last_visit' => $this->visit_model->getLastVisit()->created_at
       ],
       'article' => [
-        'count' => $this->editor_model->getArticleSummary()->article_count,
-        'last' => $this->editor_model->getLastArticle()->created_at,
+        'count'       => $this->editor_model->getArticleSummary()->article_count,
+        'last'        => $this->editor_model->getLastArticle()->created_at,
         'views_count' => $this->editor_model->getArticleViewCount()->views
       ]
     ];
@@ -184,6 +185,16 @@ class Editor extends CI_Controller {
     }
   }
 
+  public function delete_gallery($id){
+    $this->load->model('gallery_model');
+
+    $id = purify($id);
+
+    $this->gallery_model->delete($id);
+
+    notify('Foto berhasil dihapus', 'success', 'editor/gallery');
+  }
+
   public function reaction(){
     $this->load->model('reaction_model');
     $data['view_name'] = 'reaction';
@@ -252,14 +263,41 @@ class Editor extends CI_Controller {
       $id     = (int) purify($this->input->get('id'));
       $action = purify($this->input->get('action'));
 
-      // var_dump($id); die();
-
       $this->reaction_model->updateHideStatus($id, $action);
 
       notify('Status berhasil diubah', 'success', 'editor/reaction');
     }
     else {
       redirect(site_url('editor/reaction'));
+    }
+  }
+
+  public function message(){
+    $this->load->model('message_model');
+    $data['view_name'] = 'message';
+    $data['messages'] = $this->message_model->get();
+
+    $this->load->view('editor/index_view', $data);
+  }
+
+  public function see_message($id){
+    $this->load->model('message_model');
+
+    $id = purify($id);
+
+    $cek = $this->message_model->check($id);
+
+    if($cek->num_rows() > 0){
+      $data['view_name'] = 'see_message';
+      $data['message'] = $cek->row();
+
+      // set menjadi sudah dibaca
+      $this->message_model->setRead($id);
+
+      $this->load->view('editor/index_view', $data);
+    }
+    else {
+      notify('Pesan tidak ditemukan', 'warning', 'editor/message');
     }
   }
 

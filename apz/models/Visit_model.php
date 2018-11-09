@@ -7,6 +7,15 @@ class Visit_model extends CI_Model {
     return $q->row();
   }
 
+  public function getLastVisit(){
+    $this->db->select('created_at');
+    $this->db->order_by('created_at', 'DESC');
+    $this->db->limit(1);
+    $q = $this->db->get('visit');
+
+    return $q->row();
+  }
+
   public function add(){
     $data = array(
       'link' => uri_string()

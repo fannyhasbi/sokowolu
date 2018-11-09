@@ -20,7 +20,7 @@
                   <td><?= $no; ?></td>
                   <td><?= $reaction->name; ?></td>
                   <td><?= $reaction->role; ?></td>
-                  <td><?= $reaction->reaction; ?></td>
+                  <td><?= strlen($reaction->reaction) > 50 ? substr($reaction->reaction, 0, 50) . '...' : $reaction->reaction; ?></td>
                   <td>
                     <a href="<?= site_url('editor/reaction/'.$reaction->id); ?>" rel="tooltip" title="Edit tanggapan" class="btn btn-default btn-link btn-sm">
                       <i class="material-icons">edit</i>
