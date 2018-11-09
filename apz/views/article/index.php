@@ -8,7 +8,7 @@
 
             <div class="content-grid-info">
               <?php $img = article_image($article->content) ? article_image($article->content) : base_url('assets/img/bg1.jpg') ?>
-              <img src="<?= $img; ?>" class="content-img" alt=""/>
+              <img src="<?= $img; ?>" class="content-img" alt="<?= 'Artikel kabar desa wisata Sokowo - '. $article->name; ?>" />
               <div class="post-info">
                 <h4>
                   <a href="<?= site_url('article/'.$article->slug); ?>"><?= $article->name; ?></a>

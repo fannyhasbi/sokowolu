@@ -121,33 +121,19 @@ Redesign from : W3layouts
   <div class="welcome" id="about">
     <div class="container">
       <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">Tentang Sokowolu</h3>
-      <h4 class="wow fadeInDown animated" data-wow-delay=".7s">Desa Wisata yang Ramah, Sejuk, dan Instagrammable</h4>
-      <p class="w-text wow fadeInUp animated" data-wow-delay=".2s">Sokowolu terletak di desa Blablab, kecamatan Blablabla, kabupaten Rablbalba. Memiliki beberapa situs wisata yang wajib dikunjungi bagi blblabl albl abldblas bdalsbd las.</p>
+      <h4 class="wow fadeInDown animated" data-wow-delay=".7s"><?= $summary->slogan; ?></h4>
+      <p class="w-text wow fadeInUp animated" data-wow-delay=".2s"><?= $summary->information; ?></p>
       <div class="welcome-row">
-        <div class="col-md-4 welcome-grids wow slideInLeft animated" data-wow-delay=".2s">
-          <div class="welcome-img">
-            <img src="<?= base_url(); ?>assets/img/img1.jpg" class="img-responsive zoom-img" alt="">
-            <div class="welcome-text">
-              <h5>Blablba</h5>
+        <?php foreach($highlight as $item): ?>
+          <div class="col-md-4 welcome-grids wow slideInLeft animated" data-wow-delay=".2s">
+            <div class="welcome-img">
+              <img src="<?= base_url('uploads/gallery/'.$item->src); ?>" class="img-responsive zoom-img" alt="<?= 'Sokowolu - '. $item->judul; ?>">
+              <div class="welcome-text">
+                <h5><?= $item->judul; ?></h5>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 welcome-grids grid wow zoomIn animated" data-wow-delay=".2s">
-          <div class="welcome-img">
-            <img src="<?= base_url(); ?>assets/img/img1.jpg" class="img-responsive zoom-img" alt="">
-            <div class="welcome-text">
-              <h5>Blablablab</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 welcome-grids grid wow slideInRight animated" data-wow-delay=".2s">
-          <div class="welcome-img">
-            <img src="<?= base_url(); ?>assets/img/img1.jpg" class="img-responsive zoom-img" alt="">
-            <div class="welcome-text">
-              <h5>Blbalabl</h5>
-            </div>
-          </div>
-        </div>
+        <?php endforeach; ?>
         <div class="clearfix"> </div>
       </div>
     </div>
@@ -166,7 +152,7 @@ Redesign from : W3layouts
           <div class="col-sm-12 col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".5s">
             <ul>
               <li>
-                <img src="<?= base_url('uploads/reaction/'.$reaction->photo); ?>" class="img-responsive">
+                <img src="<?= base_url('uploads/reaction/'.$reaction->photo); ?>" class="img-responsive" alt="<?= 'tanggapan wisata desa Sokowolu - '. $reaction->name; ?>">
               </li>
               <li>
                 <h4><?= $reaction->name; ?></h4>
@@ -248,9 +234,9 @@ Redesign from : W3layouts
   <div class="address wow fadeInDown animated" data-wow-delay=".2s">
     <div class="container">
       <ul>
-        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Kecamatan Blabla, Kabupaten Balbalba, Desa Blablab</li>
+        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Desa Sokowolu, Kecamatan Getasan, Kabupaten Semarang</li>
         <li></li>
-        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>me@example.com</li>
+        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>sokowolusemarang@gmail.com</li>
       </ul>
     </div>
   </div>
@@ -298,14 +284,6 @@ Redesign from : W3layouts
     <div class="container">
       <h3 class="wow zoomIn animated" data-wow-delay=".2s"><a href="index.html">Sokowolu</a></h3>
       <p class="wow fadeInUp animated" data-wow-delay=".7s">© 2018 Sokowolu. All rights reserved | Developed by <a href="http://himaskom.undip.ac.id">HIMASKOM UNDIP</a></p>
-      <div class="social-icons wow fadeInUp animated" data-wow-delay=".9s">
-        <ul>
-          <li><a href="#"> </a></li>
-          <li><a href="#" class="fb"> </a></li>
-          <li><a href="#" class="in"> </a></li>
-          <li><a href="#" class="dott"> </a></li>
-        </ul>
-      </div>
     </div>
   </div>
   <!--//footer--> 

@@ -13,6 +13,11 @@ $route['editor/profile'] = 'editor/profile';
 $route['editor/login'] = 'home/login_editor';
 $route['editor/logout'] = 'home/logout_editor';
 
+// Summary Editor
+$route['editor/summary'] = 'editor/summary';
+// Edit foto highlight
+$route['editor/summary/(:num)'] = 'editor/edit_highlight/$1';
+
 // Article Editor
 $route['editor/article/(:any)'] = 'editor/edit_article/$1';
 $route['editor/article'] = 'editor/article';
