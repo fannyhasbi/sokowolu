@@ -248,9 +248,9 @@ Redesign from : W3layouts
   <div class="address wow fadeInDown animated" data-wow-delay=".2s">
     <div class="container">
       <ul>
-        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Kecamatan Blabla, Kabupaten Balbalba, Desa Blablab</li>
+        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Desa Sokowolu, Kecamatan Getasan, Kabupaten Semarang</li>
         <li></li>
-        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>me@example.com</li>
+        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>sokowolusemarang@gmail.com</li>
       </ul>
     </div>
   </div>
@@ -298,14 +298,6 @@ Redesign from : W3layouts
     <div class="container">
       <h3 class="wow zoomIn animated" data-wow-delay=".2s"><a href="index.html">Sokowolu</a></h3>
       <p class="wow fadeInUp animated" data-wow-delay=".7s">© 2018 Sokowolu. All rights reserved | Developed by <a href="http://himaskom.undip.ac.id">HIMASKOM UNDIP</a></p>
-      <div class="social-icons wow fadeInUp animated" data-wow-delay=".9s">
-        <ul>
-          <li><a href="#"> </a></li>
-          <li><a href="#" class="fb"> </a></li>
-          <li><a href="#" class="in"> </a></li>
-          <li><a href="#" class="dott"> </a></li>
-        </ul>
-      </div>
     </div>
   </div>
   <!--//footer--> 
