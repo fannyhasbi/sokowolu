@@ -13,6 +13,9 @@ $route['editor/profile'] = 'editor/profile';
 $route['editor/login'] = 'home/login_editor';
 $route['editor/logout'] = 'home/logout_editor';
 
+// Summary Editor
+$route['editor/summary'] = 'editor/summary';
+
 // Article Editor
 $route['editor/article/(:any)'] = 'editor/edit_article/$1';
 $route['editor/article'] = 'editor/article';

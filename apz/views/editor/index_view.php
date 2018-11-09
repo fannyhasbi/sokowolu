@@ -46,6 +46,12 @@ $message_count = $q->row()->message_count;
               <p>Dashboard</p>
             </a>
           </li>
+          <li class="nav-item <?= uri_string() == 'editor/summary' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?= site_url('editor/summary'); ?>">
+              <i class="material-icons">settings</i>
+              <p>Summary</p>
+            </a>
+          </li>
           <li class="nav-item <?= editor_active_link('article', uri_string()) ?>">
             <a class="nav-link" href="<?= site_url('editor/article'); ?>">
               <i class="material-icons">file_copy</i>
@@ -66,7 +72,7 @@ $message_count = $q->row()->message_count;
           </li>
           <li class="nav-item <?= uri_string() == 'editor/message' ? 'active' : '' ?>">
             <a class="nav-link" href="<?= site_url('editor/message'); ?>">
-              <i class="material-icons">mail</i>
+              <i class="material-icons">mode_comment</i>
               <p>Pesan <?= $message_count != 0 ? '| <span class="label label-success">'. $message_count .'</span>' : '' ?></p>
             </a>
           </li>
