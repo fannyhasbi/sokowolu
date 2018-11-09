@@ -10,7 +10,7 @@
       </div>
       <div class="card-footer">
         <div class="stats">
-          <i class="material-icons">update</i> Baru Saja
+          <i class="material-icons">update</i> <?= date_definer($summary['general']['last_visit']); ?>
         </div>
       </div>
     </div>

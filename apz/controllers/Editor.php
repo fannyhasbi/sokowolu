@@ -41,11 +41,12 @@ class Editor extends CI_Controller {
   private function dashboard(){
     $data['summary'] = [
       'general' => [
-        'visit' => $this->visit_model->getSum()->visit_count
+        'visit'      => $this->visit_model->getSum()->visit_count,
+        'last_visit' => $this->visit_model->getLastVisit()->created_at
       ],
       'article' => [
-        'count' => $this->editor_model->getArticleSummary()->article_count,
-        'last' => $this->editor_model->getLastArticle()->created_at,
+        'count'       => $this->editor_model->getArticleSummary()->article_count,
+        'last'        => $this->editor_model->getLastArticle()->created_at,
         'views_count' => $this->editor_model->getArticleViewCount()->views
       ]
     ];
