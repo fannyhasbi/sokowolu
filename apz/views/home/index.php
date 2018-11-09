@@ -152,7 +152,7 @@ Redesign from : W3layouts
           <div class="col-sm-12 col-md-4 servc-grid wow fadeInUp animated" data-wow-delay=".5s">
             <ul>
               <li>
-                <img src="<?= base_url('uploads/reaction/'.$reaction->photo); ?>" class="img-responsive">
+                <img src="<?= base_url('uploads/reaction/'.$reaction->photo); ?>" class="img-responsive" alt="<?= 'tanggapan wisata desa Sokowolu - '. $reaction->name; ?>">
               </li>
               <li>
                 <h4><?= $reaction->name; ?></h4>
