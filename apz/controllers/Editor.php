@@ -318,4 +318,10 @@ class Editor extends CI_Controller {
     }
   }
 
+  public function edit_highlight(){
+    $data['view_name'] = 'edit_highlight';
+
+    $this->load->view('editor/index_view', $data);
+  }
+
 }
