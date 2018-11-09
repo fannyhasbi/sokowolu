@@ -15,7 +15,6 @@ class Editor extends CI_Controller {
     for($i=0;$i<30;$i++){
       $alamat .= $n[rand(0, strlen($n) - 1)];
     }
-
     return $alamat;
   }
 
@@ -25,7 +24,15 @@ class Editor extends CI_Controller {
     for($i=0;$i<10;$i++){
       $alamat .= $n[rand(0, strlen($n) - 1)];
     }
+    return $alamat;
+  }
 
+  private function generateAlamatHighlight(){
+    $alamat = "hglt_";
+    $n = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    for($i=0;$i<15;$i++){
+      $alamat .= $n[rand(0, strlen($n) - 1)];
+    }
     return $alamat;
   }
 
@@ -324,15 +331,54 @@ class Editor extends CI_Controller {
 
     $cek = $this->gallery_model->checkHighlight($id);
 
-    if($cek->num_rows() > 0){
-      $data['view_name'] = 'edit_highlight';
-      $data['highlight'] = $cek->row();
+    if($this->input->post('save-highlight')){
+      // cek apakah ada foto yang diupload
+      if(!empty($_FILES['foto']['name'])){
+        $alamat = $this->generateAlamatHighlight();
 
-      $this->load->view('editor/index_view', $data);
+        // cek apakah ada src yang sama
+        $cek = $this->gallery_model->checkSrcHighlight($alamat)->num_rows();
+        while($cek > 0){
+          $alamat = $this->generateAlamatHighlight();
+          $cek = $this->gallery_model->checkSrcHighlight($alamat)->num_rows();
+        }
+
+        $config['upload_path']   = './uploads/gallery/';
+        $config['file_name']     = $alamat;
+        $config['allowed_types'] = 'jpg|png|svg';
+        $config['max_size']      = 600;
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload('foto')){
+          notify($this->upload->display_errors('', ''), 'error', 'editor/summary');
+        }
+        else {
+          $data = $this->upload->data();
+
+          $this->gallery_model->updateHighlight($id, $data['file_name']);
+
+          notify('Perubahan highlight berhasil disimpan', 'success', 'editor/summary');
+        }
+      }
+      else {
+        $this->gallery_model->updateHighlight($id, NULL);
+
+        notify('Perubahan highlight berhasil disimpan', 'success', 'editor/summary');
+      }
+
+
     }
     else {
-      notify('Foto highlight tidak ditemukan', 'warning', 'editor/summary');
-    }    
-  }
+      if($cek->num_rows() > 0){
+        $data['view_name'] = 'edit_highlight';
+        $data['highlight'] = $cek->row();
 
+        $this->load->view('editor/index_view', $data);
+      }
+      else {
+        notify('Foto highlight tidak ditemukan', 'warning', 'editor/summary');
+      }    
+    }
+  }
 }

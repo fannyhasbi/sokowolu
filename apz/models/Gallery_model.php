@@ -10,6 +10,10 @@ class Gallery_model extends CI_Model {
     return $this->db->get_where('highlight_photo', ['id' => $id]);
   }
 
+  public function checkSrcHighlight($src){
+    return $this->db->get_where('highlight_photo', ['src' => $src]);
+  }
+
   public function getForHome(){
     $this->db->limit(9);
     $this->db->order_by('id', 'DESC');
@@ -37,6 +41,20 @@ class Gallery_model extends CI_Model {
     );
 
     $this->db->insert('gallery', $data);
+  }
+
+  public function updateHighlight($id, $alamat_foto = NULL){
+    $this->db->where('id', $id);
+
+    $data = array(
+      'judul' => purify($this->input->post('judul')),
+    );
+
+    if($alamat_foto != NULL){
+      $data['src'] = $alamat_foto;
+    }
+
+    $this->db->update('highlight_photo', $data);
   }
 
   public function delete($id){
