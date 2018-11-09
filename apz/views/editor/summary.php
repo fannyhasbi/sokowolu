@@ -31,4 +31,32 @@
       </div>
     </div>
   </div>
+
+  <!-- Highlight Photos -->
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-info">
+        <h4 class="card-title ">Foto Utama</h4>
+        <p class="card-category">Foto utama adalah 3 foto terbaik yang ditampilkan pada bagian summary.</p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="text-primary">
+              <th>No.</th>
+              <th>Judul</th>
+              <th></th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Wisata Keren</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
