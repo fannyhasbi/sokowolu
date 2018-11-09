@@ -609,10 +609,10 @@ p.w-text{
 	-moz-opacity: 1;
 }
 .welcome-text h5 {
-    font-size: 3.5em;
+    font-size: 2.5em;
     color: #fff;
     text-align: center;
-    margin-top: 1.6em;
+    margin-top: 2.6em;
 }
 img.zoom-img{
 	-webkit-transform: scale(1, 1);
@@ -1301,7 +1301,7 @@ h3.title {
     min-height: 650px;
 }
 .welcome-text h5 {
-    margin-top: 1.4em;
+    margin-top: 2.4em;
 }
 .servc-grids, .team-info {
     margin-top: 3em;
@@ -1449,7 +1449,7 @@ p.w-text {
     margin: 0 .3em;
 }
 .welcome-text h5 {
-    margin-top: 1.3em;
+    margin-top: 2.3em;
     font-size: 3em;
 }
 h3.title {
@@ -1694,7 +1694,7 @@ ul.nav.navbar-right {
     padding: 0 .2em;
 }
 .welcome-text h5 {
-    margin-top: 1.2em;
+    margin-top: 2.2em;
     font-size: 2.5em;
 }
 .skills-info {
@@ -1860,7 +1860,7 @@ p {
     font-size: 0.9em;
 }
 .welcome-text h5 {
-    font-size: 2em;
+    font-size: 1em;
 }
 .b_label {
     font-size: 1em;
@@ -1989,7 +1989,7 @@ button.navbar-toggle {
     margin: 1em auto;
 }
 .welcome-text h5 {
-    margin-top: 2.6em;
+    margin-top: 3.6em;
 }
 .servc-grid {
     padding: 0 0.5em;
@@ -2137,7 +2137,7 @@ select {
     width: 100%;
 }
 .welcome-text h5 {
-    margin-top: 3em;
+    margin-top: 4em;
 }
 .bar-left,.bar-right{
     float: none;

@@ -82,7 +82,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
   <div class="footer">
     <div class="container">
-      <p>Copyrights &copy; 2018 Blog All rights reserved | Template by <a href="https://w3layouts.com/">W3layouts</a></p>
+      <p>Copyrights &copy; 2018 Sokowolu All rights reserved | Developed by <a href="http://cerc-undip.com" target="_blank">CERC UNDIP</a></p>
     </div>
   </div>
 </body>

@@ -35,6 +35,16 @@ class Editor_model extends CI_Model {
     return $q->row();
   }
 
+  public function getSummary(){
+    $this->db->select('*');
+    $this->db->from('summary');
+    $this->db->order_by('id', 'DESC');
+    $this->db->limit(1);
+    
+    $q = $this->db->get();
+    return $q->row();
+  }
+
   public function updateName(){
     $this->db->where('id', $this->session->userdata('id'));
     
@@ -53,6 +63,13 @@ class Editor_model extends CI_Model {
     );
 
     $this->db->update('editor', $data);
+  }
+
+  public function updateSummary(){
+    $slogan = purify($this->input->post('slogan'));
+    $info   = purify($this->input->post('information'));
+
+    $this->db->query("UPDATE summary SET slogan = '$slogan', information = '$info' WHERE id = (SELECT MAX(id))");
   }
 
 }
