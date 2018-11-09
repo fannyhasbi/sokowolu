@@ -14,10 +14,15 @@ class Gallery_model extends CI_Model {
     return $q->result();
   }
 
-  public function getGallery(){
+  public function get(){
     $this->db->order_by('id', 'DESC');
     $q = $this->db->get('gallery');
 
+    return $q->result();
+  }
+
+  public function getHighlight(){
+    $q = $this->db->get('highlight_photo');
     return $q->result();
   }
 

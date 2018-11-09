@@ -143,7 +143,7 @@ class Editor extends CI_Controller {
     $this->load->model('gallery_model');
 
     $data['view_name'] = 'gallery';
-    $data['gallery']   = $this->gallery_model->getGallery();
+    $data['gallery']   = $this->gallery_model->get();
 
     $this->load->view('editor/index_view', $data);
   }
@@ -308,8 +308,11 @@ class Editor extends CI_Controller {
       notify('Summary berhasil disimpan', 'success', 'editor/summary');
     }
     else {
+      $this->load->model('gallery_model');
+
       $data['view_name'] = 'summary';
-      $data['summary'] = $this->editor_model->getSummary();
+      $data['summary']   = $this->editor_model->getSummary();
+      $data['highlight'] = $this->gallery_model->getHighlight();
 
       $this->load->view('editor/index_view', $data);
     }

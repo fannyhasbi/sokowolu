@@ -48,11 +48,17 @@
               <th></th>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Wisata Keren</td>
-                <td></td>
-              </tr>
+              <?php $no = 1; foreach($highlight as $item): ?>
+                <tr>
+                  <td><?= $no; ?></td>
+                  <td><?= $item->judul; ?></td>
+                  <td>
+                    <a href="<?= site_url('editor/summary/'.$item->id); ?>" rel="tooltip" title="Edit highlight" class="btn btn-info btn-link btn-sm">
+                      <i class="material-icons">edit</i>
+                    </a>
+                  </td>
+                </tr>
+              <?php $no++; endforeach; ?>
             </tbody>
           </table>
         </div>
