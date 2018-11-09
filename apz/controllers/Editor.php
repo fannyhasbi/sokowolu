@@ -302,10 +302,17 @@ class Editor extends CI_Controller {
   }
 
   public function summary(){
-    $data['view_name'] = 'summary';
-    $data['summary'] = $this->editor_model->getSummary();
+    if($this->input->post('save-summary')){
+      $this->editor_model->updateSummary();
 
-    $this->load->view('editor/index_view', $data);
+      notify('Summary berhasil disimpan', 'success', 'editor/summary');
+    }
+    else {
+      $data['view_name'] = 'summary';
+      $data['summary'] = $this->editor_model->getSummary();
+
+      $this->load->view('editor/index_view', $data);
+    }
   }
 
 }

@@ -36,7 +36,12 @@ class Editor_model extends CI_Model {
   }
 
   public function getSummary(){
-    $q = $this->db->query('SELECT * FROM summary HAVING id = MAX(id)');
+    $this->db->select('*');
+    $this->db->from('summary');
+    $this->db->order_by('id', 'DESC');
+    $this->db->limit(1);
+    
+    $q = $this->db->get();
     return $q->row();
   }
 
@@ -58,6 +63,13 @@ class Editor_model extends CI_Model {
     );
 
     $this->db->update('editor', $data);
+  }
+
+  public function updateSummary(){
+    $slogan = purify($this->input->post('slogan'));
+    $info   = purify($this->input->post('information'));
+
+    $this->db->query("UPDATE summary SET slogan = '$slogan', information = '$info' WHERE id = (SELECT MAX(id))");
   }
 
 }
