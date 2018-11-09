@@ -11,7 +11,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label class="bmd-label-floating">Slogan</label>
-                <input type="text" class="form-control" name="slogan" required autofocus>
+                <input type="text" class="form-control" name="slogan" value="<?= $summary->slogan; ?>" required autofocus>
               </div>
             </div>
           </div>
@@ -20,7 +20,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label class="bmd-label-floating">Keterangan</label>
-                <textarea class="form-control"></textarea>
+                <textarea class="form-control" rows="7"><?= $summary->information; ?></textarea>
               </div>
             </div>
           </div>

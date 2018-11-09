@@ -303,6 +303,7 @@ class Editor extends CI_Controller {
 
   public function summary(){
     $data['view_name'] = 'summary';
+    $data['summary'] = $this->editor_model->getSummary();
 
     $this->load->view('editor/index_view', $data);
   }

@@ -35,6 +35,11 @@ class Editor_model extends CI_Model {
     return $q->row();
   }
 
+  public function getSummary(){
+    $q = $this->db->query('SELECT * FROM summary HAVING id = MAX(id)');
+    return $q->row();
+  }
+
   public function updateName(){
     $this->db->where('id', $this->session->userdata('id'));
     
