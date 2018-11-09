@@ -269,4 +269,9 @@ class Editor extends CI_Controller {
     $this->load->view('editor/index_view', $data);
   }
 
+  public function see_message($id){
+    $data['view_name'] = 'see_message';
+    $this->load->view('editor/index_view', $data);
+  }
+
 }

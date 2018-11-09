@@ -30,6 +30,7 @@ $route['editor/action-reaction'] = 'editor/action_reaction';
 
 // Message Editor
 $route['editor/message'] = 'editor/message';
+$route['editor/message/(:num)'] = 'editor/see_message/$1';
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
