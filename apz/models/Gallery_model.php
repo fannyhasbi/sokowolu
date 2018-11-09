@@ -29,4 +29,10 @@ class Gallery_model extends CI_Model {
 
     $this->db->insert('gallery', $data);
   }
+
+  public function delete($id){
+    $this->db->where('id', $id);
+
+    $this->db->delete('gallery');
+  }
 }

@@ -22,6 +22,7 @@ $route['editor/delete-article/(:num)'] = 'editor/delete_article/$1';
 // Gallery Editor
 $route['editor/gallery'] = 'editor/gallery';
 $route['editor/add-gallery'] = 'editor/add_gallery';
+$route['editor/delete-gallery/(:num)'] = 'editor/delete_gallery/$1';
 
 // Reaction for homepage Editor
 $route['editor/reaction'] = 'editor/reaction';

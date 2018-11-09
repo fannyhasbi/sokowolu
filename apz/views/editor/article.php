@@ -67,7 +67,7 @@ function delete_article(id, name){
   })
   .then((value) => {
     if(value == 'delete'){
-      window.location = "<?= site_url('editor/delete-article/'); ?>"+ id;
+      window.location = "<?= site_url('editor/delete-gallery/'); ?>"+ id;
     }
   });
 }

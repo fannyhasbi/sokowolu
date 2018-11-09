@@ -184,6 +184,16 @@ class Editor extends CI_Controller {
     }
   }
 
+  public function delete_gallery($id){
+    $this->load->model('gallery_model');
+
+    $id = purify($id);
+
+    $this->gallery_model->delete($id);
+
+    notify('Foto berhasil dihapus', 'success', 'editor/gallery');
+  }
+
   public function reaction(){
     $this->load->model('reaction_model');
     $data['view_name'] = 'reaction';
