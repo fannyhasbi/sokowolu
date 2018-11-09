@@ -7,7 +7,7 @@
       </div>
         
       <ul class="comment-list">
-        <li><img src="<?= base_url('assets/img/avatar.png'); ?>" class="img-responsive" alt="">
+        <li><img src="<?= base_url('assets/img/avatar.png'); ?>" class="img-responsive" alt="Admin desa wisata Sokowolu">
         <div class="desc">
           <p>Ditulis oleh: admin</p>
         </div>
