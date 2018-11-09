@@ -2,6 +2,7 @@
 uploads/
 
 # files
+.env
 production.zip
 sokowolu.sql
 

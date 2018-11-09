@@ -23,29 +23,56 @@ class Home extends CI_Controller {
       redirect(site_url('editor'));
 
     if($this->input->post('login')){
-      $this->load->model('editor_model');
-      $username = $this->input->post('username');
+      $recaptcha = $this->input->post('recaptcha');
+      
+      $url = 'https://www.google.com/recaptcha/api/siteverify';
+      $data = array(
+        'secret' => getenv('RECAPTCHA_SECRET_KEY'),
+        'response' => $this->input->post('g-recaptcha-response')
+      );
 
-      if($this->editor_model->checkUsername($username)->num_rows() > 0){
-        $editor = $this->editor_model->getByUsername($username);
+      $options = array(
+        'http' => array (
+          'header' => "Content-Type: application/x-www-form-urlencoded",
+          'method' => 'POST',
+          'content' => http_build_query($data)
+        )
+      );
 
-        $password = $this->input->post('password');
+      $context  = stream_context_create($options);
+      $verify = file_get_contents($url, false, $context);
+      
+      $output = json_decode($verify);
 
-        if(password_verify($password, $editor->password)){
-          $session_data = array(
-            'id' => $editor->id,
-            'editor_login' => true,
-            'name' => $editor->name,
-            'username' => $editor->username
-          );
+      if($output->success){
+        $this->load->model('editor_model');
+        $username = $this->input->post('username');
 
-          $this->session->set_userdata($session_data);
+        if($this->editor_model->checkUsername($username)->num_rows() > 0){
+          $editor = $this->editor_model->getByUsername($username);
 
-          redirect(site_url('editor'));
+          $password = $this->input->post('password');
+
+          if(password_verify($password, $editor->password)){
+            $session_data = array(
+              'id' => $editor->id,
+              'editor_login' => true,
+              'name' => $editor->name,
+              'username' => $editor->username
+            );
+
+            $this->session->set_userdata($session_data);
+
+            redirect(site_url('editor'));
+          }
         }
+
+        $this->session->set_flashdata('msg', '<div class="alert alert-danger">Username atau password salah</div>');
+
+        redirect(site_url('editor/login'));
       }
 
-      $this->session->set_flashdata('msg', '<div class="alert alert-danger">Username atau password salah</div>');
+      $this->session->set_flashdata('msg', '<div class="alert alert-danger">Hmm you are a robot.</div>');
 
       redirect(site_url('editor/login'));
     }
