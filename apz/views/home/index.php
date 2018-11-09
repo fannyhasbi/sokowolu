@@ -121,8 +121,8 @@ Redesign from : W3layouts
   <div class="welcome" id="about">
     <div class="container">
       <h3 class="title wow fadeInDown animated" data-wow-delay=".2s">Tentang Sokowolu</h3>
-      <h4 class="wow fadeInDown animated" data-wow-delay=".7s">Desa Wisata yang Ramah, Sejuk, dan Instagrammable</h4>
-      <p class="w-text wow fadeInUp animated" data-wow-delay=".2s">Sokowolu terletak di desa Blablab, kecamatan Blablabla, kabupaten Rablbalba. Memiliki beberapa situs wisata yang wajib dikunjungi bagi blblabl albl abldblas bdalsbd las.</p>
+      <h4 class="wow fadeInDown animated" data-wow-delay=".7s"><?= $summary->slogan; ?></h4>
+      <p class="w-text wow fadeInUp animated" data-wow-delay=".2s"><?= $summary->information; ?></p>
       <div class="welcome-row">
         <div class="col-md-4 welcome-grids wow slideInLeft animated" data-wow-delay=".2s">
           <div class="welcome-img">

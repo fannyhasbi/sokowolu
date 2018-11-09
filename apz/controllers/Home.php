@@ -9,11 +9,13 @@ class Home extends CI_Controller {
   }
 
   public function index(){
-    $this->load->model('gallery_model');
+    $this->load->model('editor_model');
     $this->load->model('reaction_model');
+    $this->load->model('gallery_model');
 
-    $data['gallery'] = $this->gallery_model->getForHome();
+    $data['summary']   = $this->editor_model->getSummary();
     $data['reactions'] = $this->reaction_model->getForHome();
+    $data['gallery']   = $this->gallery_model->getForHome();
 
     $this->load->view('home/index', $data);
   }

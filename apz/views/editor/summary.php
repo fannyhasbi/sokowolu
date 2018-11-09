@@ -11,7 +11,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label class="bmd-label-floating">Slogan <span class="small text-info">Max 300</span></label>
-                <input type="text" class="form-control" name="slogan" value="<?= $summary->slogan; ?>" required autofocus>
+                <input type="text" class="form-control" name="slogan" value="<?= $summary->slogan; ?>" required>
               </div>
             </div>
           </div>
