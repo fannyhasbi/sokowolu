@@ -10,7 +10,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label class="bmd-label-floating">Judul</label>
-                <input type="text" class="form-control" name="name" required autofocus>
+                <input type="text" class="form-control" name="name" value="<?= $highlight->judul; ?>" required>
               </div>
             </div>
           </div>

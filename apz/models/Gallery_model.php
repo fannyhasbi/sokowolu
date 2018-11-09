@@ -6,6 +6,10 @@ class Gallery_model extends CI_Model {
     return $this->db->get_where('gallery', ['src' => $src]);
   }
 
+  public function checkHighlight($id){
+    return $this->db->get_where('highlight_photo', ['id' => $id]);
+  }
+
   public function getForHome(){
     $this->db->limit(9);
     $this->db->order_by('id', 'DESC');

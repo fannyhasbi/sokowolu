@@ -318,10 +318,21 @@ class Editor extends CI_Controller {
     }
   }
 
-  public function edit_highlight(){
-    $data['view_name'] = 'edit_highlight';
+  public function edit_highlight($id){
+    $id = purify($id);
+    $this->load->model('gallery_model');
 
-    $this->load->view('editor/index_view', $data);
+    $cek = $this->gallery_model->checkHighlight($id);
+
+    if($cek->num_rows() > 0){
+      $data['view_name'] = 'edit_highlight';
+      $data['highlight'] = $cek->row();
+
+      $this->load->view('editor/index_view', $data);
+    }
+    else {
+      notify('Foto highlight tidak ditemukan', 'warning', 'editor/summary');
+    }    
   }
 
 }

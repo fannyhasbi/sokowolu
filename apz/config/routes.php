@@ -16,7 +16,7 @@ $route['editor/logout'] = 'home/logout_editor';
 // Summary Editor
 $route['editor/summary'] = 'editor/summary';
 // Edit foto highlight
-$route['editor/summary/(:num)'] = 'editor/edit_highlight';
+$route['editor/summary/(:num)'] = 'editor/edit_highlight/$1';
 
 // Article Editor
 $route['editor/article/(:any)'] = 'editor/edit_article/$1';
